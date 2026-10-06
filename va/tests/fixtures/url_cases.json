@@ -1,0 +1,2465 @@
+[
+ {
+  "url": "https://www.cw.com.tw/",
+  "expect": "benign",
+  "category": "benign_tw_media",
+  "note": "天下雜誌：.com.tw 的 m. 子字串曾誤觸 h5/wap 規則"
+ },
+ {
+  "url": "https://www.cw.com.tw/article/5130000",
+  "expect": "benign",
+  "category": "benign_tw_media",
+  "note": "天下雜誌文章頁"
+ },
+ {
+  "url": "https://www.cw.com.tw/magazine/magazine.action?id=800",
+  "expect": "benign",
+  "category": "benign_tw_media",
+  "note": "天下雜誌期刊頁"
+ },
+ {
+  "url": "https://udn.com/news/index",
+  "expect": "benign",
+  "category": "benign_tw_media",
+  "note": "聯合新聞網首頁"
+ },
+ {
+  "url": "https://udn.com/news/story/7238/8000000",
+  "expect": "benign",
+  "category": "benign_tw_media",
+  "note": "聯合新聞網財經文章"
+ },
+ {
+  "url": "https://money.udn.com/money/story/5607/8000000",
+  "expect": "benign",
+  "category": "benign_tw_media",
+  "note": "經濟日報：money 子網域"
+ },
+ {
+  "url": "https://www.ettoday.net/news/20250101/2800000.htm",
+  "expect": "benign",
+  "category": "benign_tw_media",
+  "note": "ETtoday 新聞"
+ },
+ {
+  "url": "https://finance.ettoday.net/news/2800000",
+  "expect": "benign",
+  "category": "benign_tw_media",
+  "note": "ETtoday 財經雲：finance 子網域"
+ },
+ {
+  "url": "https://news.ltn.com.tw/news/life/breakingnews/4900000",
+  "expect": "benign",
+  "category": "benign_tw_media",
+  "note": "自由時報"
+ },
+ {
+  "url": "https://ec.ltn.com.tw/article/breakingnews/4900000",
+  "expect": "benign",
+  "category": "benign_tw_media",
+  "note": "自由財經"
+ },
+ {
+  "url": "https://www.chinatimes.com/realtimenews/20250101000000-260410",
+  "expect": "benign",
+  "category": "benign_tw_media",
+  "note": "中時新聞網"
+ },
+ {
+  "url": "https://www.storm.mg/article/5000000",
+  "expect": "benign",
+  "category": "benign_tw_media",
+  "note": "風傳媒 .mg TLD"
+ },
+ {
+  "url": "https://www.setn.com/News.aspx?NewsID=1500000",
+  "expect": "benign",
+  "category": "benign_tw_media",
+  "note": "三立新聞"
+ },
+ {
+  "url": "https://news.tvbs.com.tw/money/2700000",
+  "expect": "benign",
+  "category": "benign_tw_media",
+  "note": "TVBS 財經"
+ },
+ {
+  "url": "https://www.cna.com.tw/news/afe/202501010001.aspx",
+  "expect": "benign",
+  "category": "benign_tw_media",
+  "note": "中央社"
+ },
+ {
+  "url": "https://www.businessweekly.com.tw/business/blog/3015000",
+  "expect": "benign",
+  "category": "benign_tw_media",
+  "note": "商業周刊"
+ },
+ {
+  "url": "https://www.bnext.com.tw/article/80000/ai-stock",
+  "expect": "benign",
+  "category": "benign_tw_media",
+  "note": "數位時代：路徑含 ai-stock"
+ },
+ {
+  "url": "https://www.cmoney.tw/forum/stock/2330",
+  "expect": "benign",
+  "category": "benign_tw_media",
+  "note": "CMoney 股市論壇：/stock/2330"
+ },
+ {
+  "url": "https://tw.stock.yahoo.com/quote/2330.TW",
+  "expect": "benign",
+  "category": "benign_tw_media",
+  "note": "Yahoo 股市：/quote/2330.TW"
+ },
+ {
+  "url": "https://tw.news.yahoo.com/",
+  "expect": "benign",
+  "category": "benign_tw_media",
+  "note": "Yahoo 新聞"
+ },
+ {
+  "url": "https://www.cnyes.com/twstock/2330",
+  "expect": "benign",
+  "category": "benign_tw_media",
+  "note": "鉅亨網台股 2330"
+ },
+ {
+  "url": "https://news.cnyes.com/news/cat/tw_stock",
+  "expect": "benign",
+  "category": "benign_tw_media",
+  "note": "鉅亨網新聞：tw_stock"
+ },
+ {
+  "url": "https://www.moneydj.com/kmdj/news/newsviewer.aspx?a=abc",
+  "expect": "benign",
+  "category": "benign_tw_media",
+  "note": "MoneyDJ 理財網"
+ },
+ {
+  "url": "https://www.wealth.com.tw/articles/abc",
+  "expect": "benign",
+  "category": "benign_tw_media",
+  "note": "財訊"
+ },
+ {
+  "url": "https://www.pts.org.tw/",
+  "expect": "benign",
+  "category": "benign_tw_media",
+  "note": "公視 .org.tw"
+ },
+ {
+  "url": "https://news.pts.org.tw/article/700000",
+  "expect": "benign",
+  "category": "benign_tw_media",
+  "note": "公視新聞網"
+ },
+ {
+  "url": "https://www.mirrormedia.mg/story/20250101fin001",
+  "expect": "benign",
+  "category": "benign_tw_media",
+  "note": "鏡週刊"
+ },
+ {
+  "url": "https://www.books.com.tw/",
+  "expect": "benign",
+  "category": "benign_tw_retail",
+  "note": "博客來"
+ },
+ {
+  "url": "https://www.poyabuy.com.tw/",
+  "expect": "benign",
+  "category": "benign_tw_retail",
+  "note": "寶雅官方：曾被 brand_spoof_ecommerce 誤判 86 分"
+ },
+ {
+  "url": "https://www.poyabuy.com.tw/SalePage/Index/9000000",
+  "expect": "benign",
+  "category": "benign_tw_retail",
+  "note": "寶雅商品頁"
+ },
+ {
+  "url": "https://www.cosmed.com.tw/",
+  "expect": "benign",
+  "category": "benign_tw_retail",
+  "note": "康是美官方：cosmed 曾在 BRAND_TYPO_PATTERN"
+ },
+ {
+  "url": "https://shop.cosmed.com.tw/v2/official/SalePageCategory/0",
+  "expect": "benign",
+  "category": "benign_tw_retail",
+  "note": "康是美網購"
+ },
+ {
+  "url": "https://www.watsons.com.tw/",
+  "expect": "benign",
+  "category": "benign_tw_retail",
+  "note": "屈臣氏官方：watson 曾在 BRAND_TYPO_PATTERN"
+ },
+ {
+  "url": "https://www.watsons.com.tw/zh-tw/c/1",
+  "expect": "benign",
+  "category": "benign_tw_retail",
+  "note": "屈臣氏分類 /zh-tw"
+ },
+ {
+  "url": "https://www.pxmart.com.tw/",
+  "expect": "benign",
+  "category": "benign_tw_retail",
+  "note": "全聯"
+ },
+ {
+  "url": "https://www.pxmart.com.tw/campaign/pxpay",
+  "expect": "benign",
+  "category": "benign_tw_retail",
+  "note": "全聯 PX Pay 活動"
+ },
+ {
+  "url": "https://www.ibon.com.tw/",
+  "expect": "benign",
+  "category": "benign_tw_retail",
+  "note": "7-11 ibon"
+ },
+ {
+  "url": "https://www.7-11.com.tw/",
+  "expect": "benign",
+  "category": "benign_tw_retail",
+  "note": "統一超商：網域含連字號與數字"
+ },
+ {
+  "url": "https://myship.7-11.com.tw/",
+  "expect": "benign",
+  "category": "benign_tw_retail",
+  "note": "7-11 賣貨便"
+ },
+ {
+  "url": "https://www.carrefour.com.tw/",
+  "expect": "benign",
+  "category": "benign_tw_retail",
+  "note": "家樂福"
+ },
+ {
+  "url": "https://online.carrefour.com.tw/zh/homepage",
+  "expect": "benign",
+  "category": "benign_tw_retail",
+  "note": "家樂福線上購物：online 子網域"
+ },
+ {
+  "url": "https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=12477016&osm=ve01&utm_source=Yahoo&utm_medium=news-feed",
+  "expect": "benign",
+  "category": "benign_tw_retail",
+  "note": "momo 商品頁帶 utm"
+ },
+ {
+  "url": "https://24h.pchome.com.tw/prod/DCBE23-A900BORKV?utm_source=criteo&utm_medium=display&utm_campaign=awo_mkt_traffic_3c&cto_pld=br1bcddvAQBdQB9ejGGibg",
+  "expect": "benign",
+  "category": "benign_tw_retail",
+  "note": "PChome 商品頁帶長 utm"
+ },
+ {
+  "url": "https://shopee.tw/mall",
+  "expect": "benign",
+  "category": "benign_tw_retail",
+  "note": "蝦皮台灣商城"
+ },
+ {
+  "url": "https://shopee.tw/product/123456/7890123?gclid=EAIaIQobChMIuau-0IXMkwMVzoFWAR1QxCEoEAEYASAAEgJFfPD_BwE",
+  "expect": "benign",
+  "category": "benign_tw_retail",
+  "note": "蝦皮商品帶 gclid"
+ },
+ {
+  "url": "https://shopee.sg/",
+  "expect": "benign",
+  "category": "benign_tw_retail",
+  "note": "蝦皮新加坡：shope⊂shopee 不得當拼寫仿冒"
+ },
+ {
+  "url": "https://shopee.com.my/",
+  "expect": "benign",
+  "category": "benign_tw_retail",
+  "note": "蝦皮馬來西亞 .com.my"
+ },
+ {
+  "url": "https://www.ruten.com.tw/",
+  "expect": "benign",
+  "category": "benign_tw_retail",
+  "note": "露天拍賣"
+ },
+ {
+  "url": "https://tw.bid.yahoo.com/",
+  "expect": "benign",
+  "category": "benign_tw_retail",
+  "note": "Yahoo 拍賣"
+ },
+ {
+  "url": "https://www.costco.com.tw/",
+  "expect": "benign",
+  "category": "benign_tw_retail",
+  "note": "好市多台灣"
+ },
+ {
+  "url": "https://www.family.com.tw/Marketing/",
+  "expect": "benign",
+  "category": "benign_tw_retail",
+  "note": "全家便利商店"
+ },
+ {
+  "url": "https://www.etmall.com.tw/",
+  "expect": "benign",
+  "category": "benign_tw_retail",
+  "note": "東森購物"
+ },
+ {
+  "url": "https://shopping.friday.tw/",
+  "expect": "benign",
+  "category": "benign_tw_retail",
+  "note": "friDay 購物"
+ },
+ {
+  "url": "https://www.tomods.com.tw/",
+  "expect": "benign",
+  "category": "benign_tw_retail",
+  "note": "Tomod's"
+ },
+ {
+  "url": "https://www.pcone.com.tw/",
+  "expect": "benign",
+  "category": "benign_tw_retail",
+  "note": "松果購物"
+ },
+ {
+  "url": "https://www.1688.com/",
+  "expect": "benign",
+  "category": "benign_tw_retail",
+  "note": "1688.com：168 子字串"
+ },
+ {
+  "url": "https://detail.1688.com/offer/600000000000.html",
+  "expect": "benign",
+  "category": "benign_tw_retail",
+  "note": "1688 商品頁"
+ },
+ {
+  "url": "https://www.taobao.com/",
+  "expect": "benign",
+  "category": "benign_tw_retail",
+  "note": "淘寶"
+ },
+ {
+  "url": "https://www.amazon.com/dp/B000000000?tag=abc-20&utm_source=newsletter",
+  "expect": "benign",
+  "category": "benign_tw_retail",
+  "note": "Amazon 帶聯盟參數"
+ },
+ {
+  "url": "https://www.duolingo.com/learn",
+  "expect": "benign",
+  "category": "benign_substring_trap",
+  "note": "learn ⊃ earn"
+ },
+ {
+  "url": "https://learn.microsoft.com/zh-tw/azure/",
+  "expect": "benign",
+  "category": "benign_substring_trap",
+  "note": "learn 子網域 + /zh-tw"
+ },
+ {
+  "url": "https://www.coursera.org/learn/machine-learning",
+  "expect": "benign",
+  "category": "benign_substring_trap",
+  "note": "/learn/ 路徑"
+ },
+ {
+  "url": "https://abc.xyz/",
+  "expect": "benign",
+  "category": "benign_substring_trap",
+  "note": "Alphabet 投資人網站 abc.xyz：.xyz 為正牌"
+ },
+ {
+  "url": "https://www.alphabet.com/",
+  "expect": "benign",
+  "category": "benign_substring_trap",
+  "note": "alphabet ⊃ bet"
+ },
+ {
+  "url": "https://www.betterhelp.com/",
+  "expect": "benign",
+  "category": "benign_substring_trap",
+  "note": "better ⊃ bet"
+ },
+ {
+  "url": "https://www.betterment.com/",
+  "expect": "benign",
+  "category": "benign_substring_trap",
+  "note": "betterment ⊃ bet"
+ },
+ {
+  "url": "https://www.bettys.co.uk/",
+  "expect": "benign",
+  "category": "benign_substring_trap",
+  "note": "bettys ⊃ bet（.co.uk）"
+ },
+ {
+  "url": "https://www.bettycrocker.com/",
+  "expect": "benign",
+  "category": "benign_substring_trap",
+  "note": "bettycrocker ⊃ bet"
+ },
+ {
+  "url": "https://www.method.com/",
+  "expect": "benign",
+  "category": "benign_substring_trap",
+  "note": "method ⊃ eth"
+ },
+ {
+  "url": "https://www.together.ai/",
+  "expect": "benign",
+  "category": "benign_substring_trap",
+  "note": "together ⊃ eth；.ai TLD"
+ },
+ {
+  "url": "https://www.ethz.ch/en.html",
+  "expect": "benign",
+  "category": "benign_substring_trap",
+  "note": "ETH Zurich：eth 為合法 token"
+ },
+ {
+  "url": "https://www.ethereum.org/zh-tw/",
+  "expect": "benign",
+  "category": "benign_substring_trap",
+  "note": "以太坊官方：eth/crypto 但合法"
+ },
+ {
+  "url": "https://onlinelibrary.wiley.com/",
+  "expect": "benign",
+  "category": "benign_substring_trap",
+  "note": "online ⊃ line（Wiley 線上圖書館子網域）"
+ },
+ {
+  "url": "https://www.airlines.org/",
+  "expect": "benign",
+  "category": "benign_substring_trap",
+  "note": "airline ⊃ line"
+ },
+ {
+  "url": "https://www.evaair.com/zh-tw/index.html",
+  "expect": "benign",
+  "category": "benign_substring_trap",
+  "note": "長榮航空"
+ },
+ {
+  "url": "https://www.china-airlines.com/tw/zh",
+  "expect": "benign",
+  "category": "benign_substring_trap",
+  "note": "中華航空：airlines ⊃ line"
+ },
+ {
+  "url": "https://www.starlux-airlines.com/zh-TW",
+  "expect": "benign",
+  "category": "benign_substring_trap",
+  "note": "星宇航空"
+ },
+ {
+  "url": "https://www.deadlinefunnel.com/",
+  "expect": "benign",
+  "category": "benign_substring_trap",
+  "note": "deadline ⊃ line"
+ },
+ {
+  "url": "https://en.wikipedia.org/wiki/Pineapple",
+  "expect": "benign",
+  "category": "benign_substring_trap",
+  "note": "pineapple ⊃ apple（路徑）"
+ },
+ {
+  "url": "https://www.linkedin.com/in/someone",
+  "expect": "benign",
+  "category": "benign_substring_trap",
+  "note": "link/line 相近"
+ },
+ {
+  "url": "https://www.officetimeline.com/",
+  "expect": "benign",
+  "category": "benign_substring_trap",
+  "note": "officetimeline ⊃ line"
+ },
+ {
+  "url": "https://www.opentable.com/",
+  "expect": "benign",
+  "category": "benign_substring_trap",
+  "note": "open+table，無風險"
+ },
+ {
+  "url": "https://www.moma.org/",
+  "expect": "benign",
+  "category": "benign_substring_trap",
+  "note": "moma 與 momo 編輯距離 1，不得當仿冒"
+ },
+ {
+  "url": "https://www.nine.com.au/",
+  "expect": "benign",
+  "category": "benign_substring_trap",
+  "note": "nine 與 line 編輯距離 1（.com.au ccSLD）"
+ },
+ {
+  "url": "https://www.pola.co.jp/",
+  "expect": "benign",
+  "category": "benign_substring_trap",
+  "note": "pola 與 poya 編輯距離 1（.co.jp ccSLD）"
+ },
+ {
+  "url": "https://www.gamer.com.tw/",
+  "expect": "benign",
+  "category": "benign_substring_trap",
+  "note": "巴哈姆特：game 非博弈"
+ },
+ {
+  "url": "https://ani.gamer.com.tw/",
+  "expect": "benign",
+  "category": "benign_substring_trap",
+  "note": "巴哈動畫瘋"
+ },
+ {
+  "url": "https://forum.gamer.com.tw/B.php?bsn=60076",
+  "expect": "benign",
+  "category": "benign_substring_trap",
+  "note": "巴哈論壇"
+ },
+ {
+  "url": "https://www.stockfeel.com.tw/",
+  "expect": "benign",
+  "category": "benign_substring_trap",
+  "note": "股感：stock 合法媒體"
+ },
+ {
+  "url": "https://www.investopedia.com/terms/i/ipo.asp",
+  "expect": "benign",
+  "category": "benign_substring_trap",
+  "note": "Investopedia：invest/ipo 詞但合法"
+ },
+ {
+  "url": "https://www.casio.com/tw/",
+  "expect": "benign",
+  "category": "benign_substring_trap",
+  "note": "casio 與 casino 相近"
+ },
+ {
+  "url": "https://www.taiwanlottery.com/",
+  "expect": "benign",
+  "category": "benign_substring_trap",
+  "note": "台灣彩券官網"
+ },
+ {
+  "url": "https://m.facebook.com/",
+  "expect": "benign",
+  "category": "benign_social",
+  "note": "臉書行動版 m."
+ },
+ {
+  "url": "https://m.facebook.com/groups/123456789/",
+  "expect": "benign",
+  "category": "benign_social",
+  "note": "臉書社團頁（非 LINE 邀請）"
+ },
+ {
+  "url": "https://www.facebook.com/TaiwanNPA165/",
+  "expect": "benign",
+  "category": "benign_social",
+  "note": "165 臉書粉專"
+ },
+ {
+  "url": "https://line.me/R/ti/p/@linebank",
+  "expect": "benign",
+  "category": "benign_social",
+  "note": "LINE 官方帳號頁 /ti/p/@（非群組邀請）"
+ },
+ {
+  "url": "https://line.me/zh-hant/",
+  "expect": "benign",
+  "category": "benign_social",
+  "note": "LINE 官網"
+ },
+ {
+  "url": "https://linecorp.com/zh-hant/",
+  "expect": "benign",
+  "category": "benign_social",
+  "note": "LINE 公司官網"
+ },
+ {
+  "url": "https://today.line.me/tw/v2/article/abc123",
+  "expect": "benign",
+  "category": "benign_social",
+  "note": "LINE TODAY 新聞"
+ },
+ {
+  "url": "https://www.instagram.com/explore/",
+  "expect": "benign",
+  "category": "benign_social",
+  "note": "Instagram"
+ },
+ {
+  "url": "https://www.threads.net/@zuck",
+  "expect": "benign",
+  "category": "benign_social",
+  "note": "Threads 個人頁 @ 在路徑而非 authority"
+ },
+ {
+  "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  "expect": "benign",
+  "category": "benign_social",
+  "note": "YouTube 影片"
+ },
+ {
+  "url": "https://m.youtube.com/@cwmagazine",
+  "expect": "benign",
+  "category": "benign_social",
+  "note": "YouTube 行動版頻道 @ 在路徑"
+ },
+ {
+  "url": "https://www.dcard.tw/f/money",
+  "expect": "benign",
+  "category": "benign_social",
+  "note": "Dcard 理財版"
+ },
+ {
+  "url": "https://www.ptt.cc/bbs/Stock/index.html",
+  "expect": "benign",
+  "category": "benign_social",
+  "note": "PTT Stock 版 .cc 合法"
+ },
+ {
+  "url": "https://t.me/telegram",
+  "expect": "benign",
+  "category": "benign_social",
+  "note": "Telegram 官方頻道（非 +邀請）"
+ },
+ {
+  "url": "https://telegram.org/",
+  "expect": "benign",
+  "category": "benign_social",
+  "note": "Telegram 官網"
+ },
+ {
+  "url": "https://x.com/elonmusk",
+  "expect": "benign",
+  "category": "benign_social",
+  "note": "X 個人頁"
+ },
+ {
+  "url": "https://www.tiktok.com/@tiktok",
+  "expect": "benign",
+  "category": "benign_social",
+  "note": "TikTok"
+ },
+ {
+  "url": "https://discord.com/",
+  "expect": "benign",
+  "category": "benign_social",
+  "note": "Discord 官網（非 discord.gg 邀請）"
+ },
+ {
+  "url": "https://www.yuanta.com.tw/eYuanta/securities",
+  "expect": "benign",
+  "category": "benign_finance",
+  "note": "元大證券"
+ },
+ {
+  "url": "https://www.fubon.com/",
+  "expect": "benign",
+  "category": "benign_finance",
+  "note": "富邦金控"
+ },
+ {
+  "url": "https://www.fubon.com/banking/",
+  "expect": "benign",
+  "category": "benign_finance",
+  "note": "台北富邦銀行"
+ },
+ {
+  "url": "https://www.cathaybk.com.tw/cathaybk/",
+  "expect": "benign",
+  "category": "benign_finance",
+  "note": "國泰世華"
+ },
+ {
+  "url": "https://www.cathaysec.com.tw/",
+  "expect": "benign",
+  "category": "benign_finance",
+  "note": "國泰證券"
+ },
+ {
+  "url": "https://www.esunbank.com.tw/",
+  "expect": "benign",
+  "category": "benign_finance",
+  "note": "玉山銀行（實際官網 .com.tw）"
+ },
+ {
+  "url": "https://www.esunbank.com/zh-tw/personal",
+  "expect": "benign",
+  "category": "benign_finance",
+  "note": "玉山銀行 esunbank.com /zh-tw"
+ },
+ {
+  "url": "https://www.sinotrade.com.tw/",
+  "expect": "benign",
+  "category": "benign_finance",
+  "note": "永豐金證券"
+ },
+ {
+  "url": "https://bank.sinopac.com/",
+  "expect": "benign",
+  "category": "benign_finance",
+  "note": "永豐銀行"
+ },
+ {
+  "url": "https://www.kgi.com.tw/zh-tw/",
+  "expect": "benign",
+  "category": "benign_finance",
+  "note": "凱基 /zh-tw"
+ },
+ {
+  "url": "https://www.ctbcbank.com/twrbo/zh_tw/index.html",
+  "expect": "benign",
+  "category": "benign_finance",
+  "note": "中國信託"
+ },
+ {
+  "url": "https://www.megabank.com.tw/personal",
+  "expect": "benign",
+  "category": "benign_finance",
+  "note": "兆豐銀行"
+ },
+ {
+  "url": "https://www.bot.com.tw/tw/personal",
+  "expect": "benign",
+  "category": "benign_finance",
+  "note": "臺灣銀行"
+ },
+ {
+  "url": "https://rate.bot.com.tw/xrt?Lang=zh-TW",
+  "expect": "benign",
+  "category": "benign_finance",
+  "note": "臺銀牌告匯率"
+ },
+ {
+  "url": "https://www.firstbank.com.tw/sites/fcb/",
+  "expect": "benign",
+  "category": "benign_finance",
+  "note": "第一銀行"
+ },
+ {
+  "url": "https://www.landbank.com.tw/",
+  "expect": "benign",
+  "category": "benign_finance",
+  "note": "土地銀行"
+ },
+ {
+  "url": "https://www.taishinbank.com.tw/TSB/personal/",
+  "expect": "benign",
+  "category": "benign_finance",
+  "note": "台新銀行"
+ },
+ {
+  "url": "https://www.post.gov.tw/post/internet/index.jsp",
+  "expect": "benign",
+  "category": "benign_finance",
+  "note": "中華郵政"
+ },
+ {
+  "url": "https://www.twse.com.tw/zh/index.html",
+  "expect": "benign",
+  "category": "benign_finance",
+  "note": "臺灣證券交易所（exchange 意涵但合法）"
+ },
+ {
+  "url": "https://www.tpex.org.tw/zh-tw/index.html",
+  "expect": "benign",
+  "category": "benign_finance",
+  "note": "櫃買中心"
+ },
+ {
+  "url": "https://www.taifex.com.tw/cht/index",
+  "expect": "benign",
+  "category": "benign_finance",
+  "note": "期交所：futures 意涵但合法"
+ },
+ {
+  "url": "https://mops.twse.com.tw/mops/web/index",
+  "expect": "benign",
+  "category": "benign_finance",
+  "note": "公開資訊觀測站"
+ },
+ {
+  "url": "https://www.tdcc.com.tw/portal/zh/",
+  "expect": "benign",
+  "category": "benign_finance",
+  "note": "集保結算所"
+ },
+ {
+  "url": "https://www.sitca.org.tw/",
+  "expect": "benign",
+  "category": "benign_finance",
+  "note": "投信投顧公會 .org.tw"
+ },
+ {
+  "url": "https://www.linebank.com.tw/",
+  "expect": "benign",
+  "category": "benign_finance",
+  "note": "LINE Bank：line 品牌官方"
+ },
+ {
+  "url": "https://www.nextbank.com.tw/",
+  "expect": "benign",
+  "category": "benign_finance",
+  "note": "將來銀行"
+ },
+ {
+  "url": "https://www.richart.tw/TSDIB_RichartWeb/RC00/RC000000",
+  "expect": "benign",
+  "category": "benign_finance",
+  "note": "Richart 數位帳戶"
+ },
+ {
+  "url": "http://www.cathaylife.com.tw/",
+  "expect": "benign",
+  "category": "benign_finance",
+  "note": "國泰人壽：明確 http"
+ },
+ {
+  "url": "https://www.americanexpress.com/zh-tw/?comm_track_id=r_cb16f4e9-8fa3-426d-9e7e-9731fd96aa1d_1_x",
+  "expect": "benign",
+  "category": "benign_finance",
+  "note": "美國運通帶追蹤參數"
+ },
+ {
+  "url": "https://www.dbs.com.tw/index-zh/default.page",
+  "expect": "benign",
+  "category": "benign_finance",
+  "note": "星展台灣"
+ },
+ {
+  "url": "https://www.binance.com/zh-TC",
+  "expect": "benign",
+  "category": "benign_crypto_exchange",
+  "note": "幣安官方"
+ },
+ {
+  "url": "https://www.binance.com/zh-TC/register?ref=ABC123",
+  "expect": "benign",
+  "category": "benign_crypto_exchange",
+  "note": "幣安官方註冊帶 ref（register 路徑但官方）"
+ },
+ {
+  "url": "https://accounts.binance.com/zh-TC/login",
+  "expect": "benign",
+  "category": "benign_crypto_exchange",
+  "note": "幣安官方登入子網域"
+ },
+ {
+  "url": "https://www.okx.com/zh-hant",
+  "expect": "benign",
+  "category": "benign_crypto_exchange",
+  "note": "OKX 官方"
+ },
+ {
+  "url": "https://www.coinbase.com/",
+  "expect": "benign",
+  "category": "benign_crypto_exchange",
+  "note": "Coinbase 官方"
+ },
+ {
+  "url": "https://www.coinbase.com/learn/crypto-basics",
+  "expect": "benign",
+  "category": "benign_crypto_exchange",
+  "note": "Coinbase learn 路徑"
+ },
+ {
+  "url": "https://max.maicoin.com/",
+  "expect": "benign",
+  "category": "benign_crypto_exchange",
+  "note": "MAX 交易所官方"
+ },
+ {
+  "url": "https://www.maicoin.com/zh-TW",
+  "expect": "benign",
+  "category": "benign_crypto_exchange",
+  "note": "MaiCoin 官方"
+ },
+ {
+  "url": "https://www.bitopro.com/ns/home",
+  "expect": "benign",
+  "category": "benign_crypto_exchange",
+  "note": "BitoPro 官方"
+ },
+ {
+  "url": "https://www.bybit.com/zh-TW/",
+  "expect": "benign",
+  "category": "benign_crypto_exchange",
+  "note": "Bybit 官方"
+ },
+ {
+  "url": "https://www.kraken.com/",
+  "expect": "benign",
+  "category": "benign_crypto_exchange",
+  "note": "Kraken 官方"
+ },
+ {
+  "url": "https://www.coingecko.com/zh-tw",
+  "expect": "benign",
+  "category": "benign_crypto_exchange",
+  "note": "CoinGecko 行情站"
+ },
+ {
+  "url": "https://coinmarketcap.com/zh-tw/",
+  "expect": "benign",
+  "category": "benign_crypto_exchange",
+  "note": "CoinMarketCap"
+ },
+ {
+  "url": "https://metamask.io/",
+  "expect": "benign",
+  "category": "benign_crypto_exchange",
+  "note": "MetaMask 官方（wallet）"
+ },
+ {
+  "url": "https://etherscan.io/",
+  "expect": "benign",
+  "category": "benign_crypto_exchange",
+  "note": "Etherscan 區塊瀏覽器"
+ },
+ {
+  "url": "https://docs.github.com/zh/get-started",
+  "expect": "benign",
+  "category": "benign_cloud_docs",
+  "note": "GitHub 文件"
+ },
+ {
+  "url": "https://github.com/scikit-learn/scikit-learn",
+  "expect": "benign",
+  "category": "benign_cloud_docs",
+  "note": "GitHub repo（learn 子字串）"
+ },
+ {
+  "url": "https://pages.github.com/",
+  "expect": "benign",
+  "category": "benign_cloud_docs",
+  "note": "GitHub Pages 官方說明頁"
+ },
+ {
+  "url": "https://developers.google.com/search/docs",
+  "expect": "benign",
+  "category": "benign_cloud_docs",
+  "note": "Google 開發者文件"
+ },
+ {
+  "url": "https://cloud.google.com/run/docs",
+  "expect": "benign",
+  "category": "benign_cloud_docs",
+  "note": "Cloud Run 文件"
+ },
+ {
+  "url": "https://vercel.com/docs",
+  "expect": "benign",
+  "category": "benign_cloud_docs",
+  "note": "Vercel 官網"
+ },
+ {
+  "url": "https://www.netlify.com/",
+  "expect": "benign",
+  "category": "benign_cloud_docs",
+  "note": "Netlify 官網"
+ },
+ {
+  "url": "https://docs.netlify.com/",
+  "expect": "benign",
+  "category": "benign_cloud_docs",
+  "note": "Netlify 文件"
+ },
+ {
+  "url": "https://developers.cloudflare.com/pages/",
+  "expect": "benign",
+  "category": "benign_cloud_docs",
+  "note": "Cloudflare Pages 文件"
+ },
+ {
+  "url": "https://firebase.google.com/docs/hosting",
+  "expect": "benign",
+  "category": "benign_cloud_docs",
+  "note": "Firebase Hosting 文件"
+ },
+ {
+  "url": "https://azure.microsoft.com/zh-tw/",
+  "expect": "benign",
+  "category": "benign_cloud_docs",
+  "note": "Azure 官網"
+ },
+ {
+  "url": "https://aws.amazon.com/tw/",
+  "expect": "benign",
+  "category": "benign_cloud_docs",
+  "note": "AWS 官網"
+ },
+ {
+  "url": "https://docs.python.org/3/library/urllib.parse.html",
+  "expect": "benign",
+  "category": "benign_cloud_docs",
+  "note": "Python 文件"
+ },
+ {
+  "url": "https://stackoverflow.com/questions/tagged/python",
+  "expect": "benign",
+  "category": "benign_cloud_docs",
+  "note": "Stack Overflow"
+ },
+ {
+  "url": "https://ngrok.com/docs",
+  "expect": "benign",
+  "category": "benign_cloud_docs",
+  "note": "ngrok 官方文件（非通道子網域）"
+ },
+ {
+  "url": "https://www.notion.so/",
+  "expect": "benign",
+  "category": "benign_cloud_docs",
+  "note": "Notion 官網"
+ },
+ {
+  "url": "https://drive.google.com/drive/my-drive",
+  "expect": "benign",
+  "category": "benign_cloud_docs",
+  "note": "Google Drive"
+ },
+ {
+  "url": "https://docs.google.com/document/d/1AbCdEfGhIjKlMnOpQrStUvWxYz/edit",
+  "expect": "benign",
+  "category": "benign_cloud_docs",
+  "note": "Google 文件"
+ },
+ {
+  "url": "https://165.npa.gov.tw/#/",
+  "expect": "benign",
+  "category": "benign_gov_edu",
+  "note": "165 全民防騙網本身（含 #/）"
+ },
+ {
+  "url": "https://165.npa.gov.tw/#/article/news",
+  "expect": "benign",
+  "category": "benign_gov_edu",
+  "note": "165 公告頁"
+ },
+ {
+  "url": "165.npa.gov.tw",
+  "expect": "benign",
+  "category": "benign_gov_edu",
+  "note": "無 scheme 裸網域：165 政府"
+ },
+ {
+  "url": "https://www.npa.gov.tw/ch/index",
+  "expect": "benign",
+  "category": "benign_gov_edu",
+  "note": "內政部警政署"
+ },
+ {
+  "url": "https://www.gov.tw/",
+  "expect": "benign",
+  "category": "benign_gov_edu",
+  "note": "我的 E 政府"
+ },
+ {
+  "url": "https://www.fsc.gov.tw/ch/index.jsp",
+  "expect": "benign",
+  "category": "benign_gov_edu",
+  "note": "金管會"
+ },
+ {
+  "url": "https://www.mof.gov.tw/",
+  "expect": "benign",
+  "category": "benign_gov_edu",
+  "note": "財政部"
+ },
+ {
+  "url": "https://www.etax.nat.gov.tw/etwmain/",
+  "expect": "benign",
+  "category": "benign_gov_edu",
+  "note": "財政部電子申報繳稅"
+ },
+ {
+  "url": "https://www.cdc.gov.tw/",
+  "expect": "benign",
+  "category": "benign_gov_edu",
+  "note": "疾管署"
+ },
+ {
+  "url": "https://www.ntu.edu.tw/",
+  "expect": "benign",
+  "category": "benign_gov_edu",
+  "note": "臺灣大學 .edu.tw"
+ },
+ {
+  "url": "https://www.nthu.edu.tw/",
+  "expect": "benign",
+  "category": "benign_gov_edu",
+  "note": "清華大學"
+ },
+ {
+  "url": "https://www.cgu.edu.tw/",
+  "expect": "benign",
+  "category": "benign_gov_edu",
+  "note": "長庚大學"
+ },
+ {
+  "url": "https://cool.ntu.edu.tw/login",
+  "expect": "benign",
+  "category": "benign_gov_edu",
+  "note": "NTU COOL 登入頁（edu.tw 上 login）"
+ },
+ {
+  "url": "https://www.edu.tw/",
+  "expect": "benign",
+  "category": "benign_gov_edu",
+  "note": "教育部"
+ },
+ {
+  "url": "https://www.redcross.org.tw/",
+  "expect": "benign",
+  "category": "benign_gov_edu",
+  "note": "紅十字會 .org.tw"
+ },
+ {
+  "url": "https://www.wikipedia.org/",
+  "expect": "benign",
+  "category": "benign_gov_edu",
+  "note": "維基百科"
+ },
+ {
+  "url": "https://zh.wikipedia.org/zh-tw/%E8%A9%90%E9%A8%99",
+  "expect": "benign",
+  "category": "benign_gov_edu",
+  "note": "維基百科：percent-encoded 中文「詐騙」不應讓合法頁面變高分"
+ },
+ {
+  "url": "https://m.momoshop.com.tw/main.momo",
+  "expect": "benign",
+  "category": "benign_format_variant",
+  "note": "momo 行動版 m."
+ },
+ {
+  "url": "https://m.pchome.com.tw/",
+  "expect": "benign",
+  "category": "benign_format_variant",
+  "note": "PChome 行動版"
+ },
+ {
+  "url": "https://event.momoshop.com.tw/h5/edm/index.html",
+  "expect": "benign",
+  "category": "benign_format_variant",
+  "note": "大品牌 /h5 活動頁（路徑示意）"
+ },
+ {
+  "url": "https://activity.books.com.tw/h5/2025/anniversary/",
+  "expect": "benign",
+  "category": "benign_format_variant",
+  "note": "博客來 /h5 活動頁（路徑示意）"
+ },
+ {
+  "url": "https://www.uniqlo.com/tw/zh_TW/special-feature/h5/",
+  "expect": "benign",
+  "category": "benign_format_variant",
+  "note": "UNIQLO h5 特輯路徑示意"
+ },
+ {
+  "url": "http://www.taipei.gov.tw/",
+  "expect": "benign",
+  "category": "benign_format_variant",
+  "note": "老式 http 政府網站"
+ },
+ {
+  "url": "http://www.books.com.tw/",
+  "expect": "benign",
+  "category": "benign_format_variant",
+  "note": "明確 http 的知名電商"
+ },
+ {
+  "url": "http://www.ntnu.edu.tw/",
+  "expect": "benign",
+  "category": "benign_format_variant",
+  "note": "http 教育網站"
+ },
+ {
+  "url": "books.com.tw",
+  "expect": "benign",
+  "category": "benign_format_variant",
+  "note": "無 scheme 裸網域"
+ },
+ {
+  "url": "www.pxmart.com.tw",
+  "expect": "benign",
+  "category": "benign_format_variant",
+  "note": "無 scheme 帶 www"
+ },
+ {
+  "url": "udn.com/news/index",
+  "expect": "benign",
+  "category": "benign_format_variant",
+  "note": "無 scheme 帶路徑"
+ },
+ {
+  "url": "cw.com.tw",
+  "expect": "benign",
+  "category": "benign_format_variant",
+  "note": "無 scheme：天下雜誌"
+ },
+ {
+  "url": "https://WWW.BOOKS.COM.TW/",
+  "expect": "benign",
+  "category": "benign_format_variant",
+  "note": "大寫 host"
+ },
+ {
+  "url": "https://www.books.com.tw./",
+  "expect": "benign",
+  "category": "benign_format_variant",
+  "note": "尾端點 hostname"
+ },
+ {
+  "url": "https://tw.yahoo.com/?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAAAbcdef",
+  "expect": "benign",
+  "category": "benign_format_variant",
+  "note": "Yahoo 帶長 base64 參數"
+ },
+ {
+  "url": "https://www.google.com/search?q=%E5%8F%B0%E7%A9%8D%E9%9B%BB+%E8%82%A1%E5%83%B9",
+  "expect": "benign",
+  "category": "benign_format_variant",
+  "note": "Google 搜尋：percent-encoded 中文「台積電 股價」"
+ },
+ {
+  "url": "https://www.google.com.tw/maps/place/Taipei+101",
+  "expect": "benign",
+  "category": "benign_format_variant",
+  "note": "Google 地圖 .com.tw"
+ },
+ {
+  "url": "https://www.tsmc.com/chinese",
+  "expect": "benign",
+  "category": "benign_format_variant",
+  "note": "台積電官網"
+ },
+ {
+  "url": "https://investor.tsmc.com/chinese/quarterly-results",
+  "expect": "benign",
+  "category": "benign_format_variant",
+  "note": "台積電投資人關係：investor 子網域"
+ },
+ {
+  "url": "https://www.apple.com/tw/",
+  "expect": "benign",
+  "category": "benign_format_variant",
+  "note": "Apple 台灣"
+ },
+ {
+  "url": "https://www.microsoft.com/zh-tw",
+  "expect": "benign",
+  "category": "benign_format_variant",
+  "note": "Microsoft 台灣"
+ },
+ {
+  "url": "https://www.samsung.com/tw/",
+  "expect": "benign",
+  "category": "benign_format_variant",
+  "note": "Samsung 台灣"
+ },
+ {
+  "url": "https://www.mcdonalds.com.tw/tw/ch/promotion/index.html",
+  "expect": "benign",
+  "category": "benign_format_variant",
+  "note": "麥當勞活動頁"
+ },
+ {
+  "url": "https://www.hsr.com.tw/",
+  "expect": "benign",
+  "category": "benign_format_variant",
+  "note": "台灣高鐵"
+ },
+ {
+  "url": "https://www.railway.gov.tw/tra-tip-web/tip",
+  "expect": "benign",
+  "category": "benign_format_variant",
+  "note": "台鐵訂票"
+ },
+ {
+  "url": "https://www.104.com.tw/jobs/main/",
+  "expect": "benign",
+  "category": "benign_format_variant",
+  "note": "104 人力銀行：數字網域"
+ },
+ {
+  "url": "https://www.591.com.tw/",
+  "expect": "benign",
+  "category": "benign_format_variant",
+  "note": "591 租屋：數字網域"
+ },
+ {
+  "url": "https://www.518.com.tw/",
+  "expect": "benign",
+  "category": "benign_format_variant",
+  "note": "518 熊班：數字網域"
+ },
+ {
+  "url": "https://www.8591.com.tw/",
+  "expect": "benign",
+  "category": "benign_format_variant",
+  "note": "8591 寶物交易：數字網域"
+ },
+ {
+  "url": "https://www.leyu8899.vip/",
+  "expect": "scam",
+  "category": "scam_gambling",
+  "note": "博弈：品牌+數字 .vip",
+  "min_score": 70
+ },
+ {
+  "url": "https://yule-888.top/register?code=6688",
+  "expect": "scam",
+  "category": "scam_gambling",
+  "note": "拼音 yule + .top + 推廣碼",
+  "min_score": 70
+ },
+ {
+  "url": "https://bocai365.cc/",
+  "expect": "scam",
+  "category": "scam_gambling",
+  "note": "拼音 bocai .cc",
+  "min_score": 70
+ },
+ {
+  "url": "https://www.caipiao-tw88.bet/lottery",
+  "expect": "scam",
+  "category": "scam_gambling",
+  "note": "彩票 caipiao .bet",
+  "min_score": 70
+ },
+ {
+  "url": "https://pujing-casino777.com/",
+  "expect": "scam",
+  "category": "scam_gambling",
+  "note": "葡京+casino+數字",
+  "min_score": 70
+ },
+ {
+  "url": "https://jinsha9988.vip/h5/#/register",
+  "expect": "scam",
+  "category": "scam_gambling",
+  "note": "金沙 + h5 路由",
+  "min_score": 70
+ },
+ {
+  "url": "https://weinisi-tw.top/",
+  "expect": "scam",
+  "category": "scam_gambling",
+  "note": "威尼斯人拼音 .top",
+  "min_score": 70
+ },
+ {
+  "url": "https://huangguan-sports.cc/m/",
+  "expect": "scam",
+  "category": "scam_gambling",
+  "note": "皇冠體育 .cc",
+  "min_score": 70
+ },
+ {
+  "url": "https://www.tw-baccarat66.net/",
+  "expect": "scam",
+  "category": "scam_gambling",
+  "note": "百家樂 baccarat + 數字",
+  "min_score": 70
+ },
+ {
+  "url": "https://slot-jackpot-tw.xyz/game/lobby",
+  "expect": "scam",
+  "category": "scam_gambling",
+  "note": "老虎機 slot jackpot .xyz",
+  "min_score": 70
+ },
+ {
+  "url": "https://www.ag-live-casino.club/",
+  "expect": "scam",
+  "category": "scam_gambling",
+  "note": "真人娛樂 AG .club",
+  "min_score": 70
+ },
+ {
+  "url": "https://xn--hhrz4l3wdq2a.vip/",
+  "expect": "scam",
+  "category": "scam_gambling",
+  "note": "punycode 中文娛樂城 .vip",
+  "min_score": 70
+ },
+ {
+  "url": "https://tw-yulecheng168.com/download.html",
+  "expect": "scam",
+  "category": "scam_gambling",
+  "note": "娛樂城拼音 + 下載誘導",
+  "min_score": 70
+ },
+ {
+  "url": "https://www.bet365-tw-vip.top/",
+  "expect": "scam",
+  "category": "scam_gambling",
+  "note": "知名博彩品牌仿 + .top",
+  "min_score": 70
+ },
+ {
+  "url": "https://99sportsbet.cc/zh-tw/",
+  "expect": "scam",
+  "category": "scam_gambling",
+  "note": "sportsbet .cc",
+  "min_score": 70
+ },
+ {
+  "url": "https://qp-qipai888.vip/",
+  "expect": "scam",
+  "category": "scam_gambling",
+  "note": "棋牌 qipai .vip",
+  "min_score": 70
+ },
+ {
+  "url": "https://lucky-fafa-casino.online/?agent=8812",
+  "expect": "scam",
+  "category": "scam_gambling",
+  "note": "casino .online + agent 參數",
+  "min_score": 70
+ },
+ {
+  "url": "https://mgm-tw-play.top/",
+  "expect": "scam",
+  "category": "scam_gambling",
+  "note": "博弈品牌+tw .top",
+  "min_score": 70
+ },
+ {
+  "url": "https://www.dafa888-tw.club/",
+  "expect": "scam",
+  "category": "scam_gambling",
+  "note": "dafa 拼音品牌 .club",
+  "min_score": 70
+ },
+ {
+  "url": "https://tg-poker-tw.icu/",
+  "expect": "scam",
+  "category": "scam_gambling",
+  "note": "poker .icu",
+  "min_score": 70
+ },
+ {
+  "url": "https://tougu-vip888.com/#/pages/login/login?invitecode=AB12CD",
+  "expect": "scam",
+  "category": "scam_investment",
+  "note": "投顧拼音 + uni-app 登入路由 + invitecode",
+  "min_score": 70
+ },
+ {
+  "url": "https://stock-vip-tw.top/h5/#/register",
+  "expect": "scam",
+  "category": "scam_investment",
+  "note": "stock-vip + h5 註冊",
+  "min_score": 70
+ },
+ {
+  "url": "https://feigu-laoshi.vip/",
+  "expect": "scam",
+  "category": "scam_investment",
+  "note": "飆股老師拼音 .vip",
+  "min_score": 70
+ },
+ {
+  "url": "https://www.licai-tw88.cc/#/pages/index/index",
+  "expect": "scam",
+  "category": "scam_investment",
+  "note": "理財拼音 + uni-app 路由",
+  "min_score": 70
+ },
+ {
+  "url": "https://gupiao-ai.xyz/register?code=8812",
+  "expect": "scam",
+  "category": "scam_investment",
+  "note": "股票拼音 + AI + 推廣碼",
+  "min_score": 70
+ },
+ {
+  "url": "https://ai-stock-pick-tw.top/",
+  "expect": "scam",
+  "category": "scam_investment",
+  "note": "AI 選股 .top",
+  "min_score": 70
+ },
+ {
+  "url": "https://tw-ipo-chouqian.vip/#/pages/ipo/apply",
+  "expect": "scam",
+  "category": "scam_investment",
+  "note": "IPO 抽籤 .vip",
+  "min_score": 70
+ },
+ {
+  "url": "https://quant-trade-pro.cc/h5/#/login",
+  "expect": "scam",
+  "category": "scam_investment",
+  "note": "量化交易 .cc h5",
+  "min_score": 70
+ },
+ {
+  "url": "https://dangchong-teacher.top/",
+  "expect": "scam",
+  "category": "scam_investment",
+  "note": "當沖老師拼音",
+  "min_score": 70
+ },
+ {
+  "url": "https://www.invest-tw-mentor.com/#/pages/register/register?inviteCode=X9Y8",
+  "expect": "scam",
+  "category": "scam_investment",
+  "note": "投資導師 + inviteCode",
+  "min_score": 70
+ },
+ {
+  "url": "https://wealth-vip-club.online/",
+  "expect": "scam",
+  "category": "scam_investment",
+  "note": "財富 VIP .online"
+ },
+ {
+  "url": "https://app.goldstock88.top/download.html",
+  "expect": "scam",
+  "category": "scam_investment",
+  "note": "股票 App 下載誘導 .top",
+  "min_score": 70
+ },
+ {
+  "url": "https://tw-stock-signal.vip/line",
+  "expect": "scam",
+  "category": "scam_investment",
+  "note": "報明牌 .vip",
+  "min_score": 70
+ },
+ {
+  "url": "https://www.zhengquan-tw.club/#/pages/login/login",
+  "expect": "scam",
+  "category": "scam_investment",
+  "note": "證券拼音 .club + uni-app",
+  "min_score": 70
+ },
+ {
+  "url": "https://jijin-touzi.cyou/",
+  "expect": "scam",
+  "category": "scam_investment",
+  "note": "基金投資拼音 .cyou",
+  "min_score": 70
+ },
+ {
+  "url": "https://stock.tw-touzi.shop/h5/#/",
+  "expect": "scam",
+  "category": "scam_investment",
+  "note": "投資 .shop h5",
+  "min_score": 70
+ },
+ {
+  "url": "https://forex-tw-profit.xyz/register?agentcode=5566",
+  "expect": "scam",
+  "category": "scam_investment",
+  "note": "外匯 + agentcode",
+  "min_score": 70
+ },
+ {
+  "url": "https://www.xn--1lq90ic7f.com/#/pages/login/login",
+  "expect": "scam",
+  "category": "scam_investment",
+  "note": "punycode 中文網域 + uni-app 登入",
+  "min_score": 70
+ },
+ {
+  "url": "https://example-tougu.top/%E9%A3%86%E8%82%A1%E7%BE%A4",
+  "expect": "scam",
+  "category": "scam_investment",
+  "note": "percent-encoded 中文「飆股群」+ 投顧 .top",
+  "min_score": 70
+ },
+ {
+  "url": "https://vip-stock-888.com/%E8%80%81%E5%B8%AB%E5%B8%B6%E5%96%AE",
+  "expect": "scam",
+  "category": "scam_investment",
+  "note": "percent-encoded「老師帶單」"
+ },
+ {
+  "url": "https://binance-tw-pro.com/",
+  "expect": "scam",
+  "category": "scam_fake_exchange",
+  "note": "幣安仿冒 binance-tw-pro",
+  "min_score": 70
+ },
+ {
+  "url": "https://www.okx-vip88.com/#/pages/login/login",
+  "expect": "scam",
+  "category": "scam_fake_exchange",
+  "note": "OKX 仿冒 + 數字 + uni-app",
+  "min_score": 70
+ },
+ {
+  "url": "https://bybit-app.cc/download.html",
+  "expect": "scam",
+  "category": "scam_fake_exchange",
+  "note": "Bybit 仿冒 .cc + 下載",
+  "min_score": 70
+ },
+ {
+  "url": "https://max-maicoin-tw.top/",
+  "expect": "scam",
+  "category": "scam_fake_exchange",
+  "note": "MAX 交易所仿冒 .top",
+  "min_score": 70
+ },
+ {
+  "url": "https://usdt-exchange-tw.vip/",
+  "expect": "scam",
+  "category": "scam_fake_exchange",
+  "note": "USDT exchange .vip",
+  "min_score": 70
+ },
+ {
+  "url": "https://www.bitpro-ex.com/h5/#/register?invite_code=777",
+  "expect": "scam",
+  "category": "scam_fake_exchange",
+  "note": "-ex 後綴 + h5 + invite_code",
+  "min_score": 70
+ },
+ {
+  "url": "https://coinbase-airdrop-claim.xyz/",
+  "expect": "scam",
+  "category": "scam_fake_exchange",
+  "note": "Coinbase + airdrop claim",
+  "min_score": 70
+ },
+ {
+  "url": "https://walletconnect-sync.top/connect",
+  "expect": "scam",
+  "category": "scam_fake_exchange",
+  "note": "walletconnect 假同步",
+  "min_score": 70
+ },
+ {
+  "url": "https://metamask-verify-wallet.online/",
+  "expect": "scam",
+  "category": "scam_fake_exchange",
+  "note": "MetaMask 驗證詐騙",
+  "min_score": 70
+ },
+ {
+  "url": "https://www.huobi-global-tw.cc/",
+  "expect": "scam",
+  "category": "scam_fake_exchange",
+  "note": "火幣仿冒 .cc",
+  "min_score": 70
+ },
+ {
+  "url": "https://bitopro-tw-vip.com/",
+  "expect": "scam",
+  "category": "scam_fake_exchange",
+  "note": "BitoPro 仿冒",
+  "min_score": 70
+ },
+ {
+  "url": "https://usdt-otc-tw.shop/",
+  "expect": "scam",
+  "category": "scam_fake_exchange",
+  "note": "USDT OTC 幣商 .shop",
+  "min_score": 70
+ },
+ {
+  "url": "https://defi-staking-pool.top/#/pages/mining/index",
+  "expect": "scam",
+  "category": "scam_fake_exchange",
+  "note": "DeFi 質押挖礦 + uni-app",
+  "min_score": 70
+ },
+ {
+  "url": "https://www.kucoinx-futures.com/",
+  "expect": "scam",
+  "category": "scam_fake_exchange",
+  "note": "kucoin 變體 futures",
+  "min_score": 70
+ },
+ {
+  "url": "https://tw-crypto-ex.vip/",
+  "expect": "scam",
+  "category": "scam_fake_exchange",
+  "note": "crypto -ex .vip",
+  "min_score": 70
+ },
+ {
+  "url": "https://eth-mining-reward.icu/claim",
+  "expect": "scam",
+  "category": "scam_fake_exchange",
+  "note": "ETH 挖礦獎勵 claim .icu",
+  "min_score": 70
+ },
+ {
+  "url": "https://app.coinw-tw.top/h5/#/login",
+  "expect": "scam",
+  "category": "scam_fake_exchange",
+  "note": "交易所 h5 登入 .top",
+  "min_score": 70
+ },
+ {
+  "url": "https://www.binanc-e.com/zh-TC",
+  "expect": "scam",
+  "category": "scam_fake_exchange",
+  "note": "binance 拼寫變體",
+  "min_score": 70
+ },
+ {
+  "url": "https://okx.com-tw-login.xyz/",
+  "expect": "scam",
+  "category": "scam_fake_exchange",
+  "note": "子網域偽裝 okx.com-…",
+  "min_score": 70
+ },
+ {
+  "url": "https://trustwallet-recover.site/",
+  "expect": "scam",
+  "category": "scam_fake_exchange",
+  "note": "錢包助記詞回復 .site",
+  "min_score": 70
+ },
+ {
+  "url": "https://tw-invest-club.pages.dev/invest",
+  "expect": "scam",
+  "category": "scam_ephemeral_host",
+  "note": "Cloudflare Pages 假投資",
+  "min_score": 70
+ },
+ {
+  "url": "https://stock-vip-tw.web.app/#/pages/login/login",
+  "expect": "scam",
+  "category": "scam_ephemeral_host",
+  "note": "Firebase web.app + uni-app",
+  "min_score": 70
+ },
+ {
+  "url": "https://a1b2-118-160-1-2.ngrok-free.app/login",
+  "expect": "scam",
+  "category": "scam_ephemeral_host",
+  "note": "ngrok 通道登入",
+  "min_score": 70
+ },
+ {
+  "url": "https://gentle-river-abc.trycloudflare.com/",
+  "expect": "scam",
+  "category": "scam_ephemeral_host",
+  "note": "trycloudflare 臨時通道",
+  "min_score": 70
+ },
+ {
+  "url": "https://binance-tw-pro.github.io/",
+  "expect": "scam",
+  "category": "scam_ephemeral_host",
+  "note": "github.io 假交易所",
+  "min_score": 70
+ },
+ {
+  "url": "https://esun-ebank-verify.azurewebsites.net/login",
+  "expect": "scam",
+  "category": "scam_ephemeral_host",
+  "note": "azurewebsites 假銀行",
+  "min_score": 70
+ },
+ {
+  "url": "https://okx-futures-tw.vercel.app/",
+  "expect": "scam",
+  "category": "scam_ephemeral_host",
+  "note": "vercel.app 假交易所",
+  "min_score": 70
+ },
+ {
+  "url": "https://tougu-teacher.netlify.app/#/register",
+  "expect": "scam",
+  "category": "scam_ephemeral_host",
+  "note": "netlify.app 假投顧",
+  "min_score": 70
+ },
+ {
+  "url": "https://usdt-wallet.firebaseapp.com/",
+  "expect": "scam",
+  "category": "scam_ephemeral_host",
+  "note": "firebaseapp 假錢包",
+  "min_score": 70
+ },
+ {
+  "url": "https://stockvip88.herokuapp.com/",
+  "expect": "scam",
+  "category": "scam_ephemeral_host",
+  "note": "herokuapp 假投資"
+ },
+ {
+  "url": "https://casino-tw.onrender.com/",
+  "expect": "scam",
+  "category": "scam_ephemeral_host",
+  "note": "onrender 博弈"
+ },
+ {
+  "url": "https://fubon-loan.wixsite.com/apply",
+  "expect": "scam",
+  "category": "scam_ephemeral_host",
+  "note": "wixsite 假貸款/銀行",
+  "min_score": 70
+ },
+ {
+  "url": "https://cathay-verify.weebly.com/",
+  "expect": "scam",
+  "category": "scam_ephemeral_host",
+  "note": "weebly 假銀行",
+  "min_score": 70
+ },
+ {
+  "url": "https://invest-club-tw.notion.site/",
+  "expect": "scam",
+  "category": "scam_ephemeral_host",
+  "note": "notion.site 假投資群"
+ },
+ {
+  "url": "https://tw-airdrop.workers.dev/claim",
+  "expect": "scam",
+  "category": "scam_ephemeral_host",
+  "note": "workers.dev 假空投",
+  "min_score": 70
+ },
+ {
+  "url": "https://usdt-ex.s3.amazonaws.com/index.html",
+  "expect": "scam",
+  "category": "scam_ephemeral_host",
+  "note": "S3 靜態頁假交易所",
+  "min_score": 70
+ },
+ {
+  "url": "https://bocai-tw.000webhostapp.com/",
+  "expect": "scam",
+  "category": "scam_ephemeral_host",
+  "note": "000webhostapp 博弈",
+  "min_score": 70
+ },
+ {
+  "url": "https://wallet-sync.loca.lt/",
+  "expect": "scam",
+  "category": "scam_ephemeral_host",
+  "note": "loca.lt 臨時通道",
+  "min_score": 70
+ },
+ {
+  "url": "https://fubon-vip.com/",
+  "expect": "scam",
+  "category": "scam_brand_impersonation",
+  "note": "富邦冒用",
+  "min_score": 70
+ },
+ {
+  "url": "https://esun-bank-tw.top/login",
+  "expect": "scam",
+  "category": "scam_brand_impersonation",
+  "note": "玉山冒用 .top",
+  "min_score": 70
+ },
+ {
+  "url": "https://165-npa-gov.xyz/",
+  "expect": "scam",
+  "category": "scam_brand_impersonation",
+  "note": "165 政府冒用 .xyz",
+  "min_score": 70
+ },
+ {
+  "url": "https://yuanta-securities.app/",
+  "expect": "scam",
+  "category": "scam_brand_impersonation",
+  "note": "元大冒用 .app",
+  "min_score": 70
+ },
+ {
+  "url": "https://cathaybk-tw.online/verify",
+  "expect": "scam",
+  "category": "scam_brand_impersonation",
+  "note": "國泰冒用 .online",
+  "min_score": 70
+ },
+ {
+  "url": "https://www.ctbc-bank-service.cc/",
+  "expect": "scam",
+  "category": "scam_brand_impersonation",
+  "note": "中信冒用 .cc",
+  "min_score": 70
+ },
+ {
+  "url": "https://kgi-vip888.com/#/pages/login/login",
+  "expect": "scam",
+  "category": "scam_brand_impersonation",
+  "note": "凱基冒用 + uni-app",
+  "min_score": 70
+ },
+ {
+  "url": "https://sinotrade-tw.vip/",
+  "expect": "scam",
+  "category": "scam_brand_impersonation",
+  "note": "永豐金冒用 .vip",
+  "min_score": 70
+ },
+ {
+  "url": "https://npa-gov-tw.top/refund",
+  "expect": "scam",
+  "category": "scam_brand_impersonation",
+  "note": "警政署冒用退款",
+  "min_score": 70
+ },
+ {
+  "url": "https://mof-tax-refund.xyz/",
+  "expect": "scam",
+  "category": "scam_brand_impersonation",
+  "note": "財政部退稅冒用",
+  "min_score": 70
+ },
+ {
+  "url": "https://shopeemall-tw.top/",
+  "expect": "scam",
+  "category": "scam_brand_impersonation",
+  "note": "蝦皮冒用 shopeemall",
+  "min_score": 70
+ },
+ {
+  "url": "https://momo-shop-vip.cc/",
+  "expect": "scam",
+  "category": "scam_brand_impersonation",
+  "note": "momo 冒用",
+  "min_score": 70
+ },
+ {
+  "url": "https://line-bank-tw.top/",
+  "expect": "scam",
+  "category": "scam_brand_impersonation",
+  "note": "LINE Bank 冒用",
+  "min_score": 70
+ },
+ {
+  "url": "https://www.poya-buy.shop/",
+  "expect": "scam",
+  "category": "scam_brand_impersonation",
+  "note": "寶雅冒用",
+  "min_score": 70
+ },
+ {
+  "url": "https://post-gov-tw.icu/parcel",
+  "expect": "scam",
+  "category": "scam_brand_impersonation",
+  "note": "郵局包裹冒用",
+  "min_score": 70
+ },
+ {
+  "url": "https://xn--binnce-wsa.com/",
+  "expect": "scam",
+  "category": "scam_url_obfuscation",
+  "note": "punycode 仿 binance",
+  "min_score": 70
+ },
+ {
+  "url": "https://xn--esunbnk-9wa.com.tw.xn--p1ai/",
+  "expect": "scam",
+  "category": "scam_url_obfuscation",
+  "note": "punycode 多層仿冒",
+  "min_score": 70
+ },
+ {
+  "url": "https://www.esunbank.com.tw@evil-login.xyz/",
+  "expect": "scam",
+  "category": "scam_url_obfuscation",
+  "note": "@ userinfo 偽裝玉山",
+  "min_score": 70
+ },
+ {
+  "url": "https://www.binance.com@binance-tw-pro.top/login",
+  "expect": "scam",
+  "category": "scam_url_obfuscation",
+  "note": "@ userinfo 偽裝幣安",
+  "min_score": 70
+ },
+ {
+  "url": "http://165.npa.gov.tw@refund-165.cc/",
+  "expect": "scam",
+  "category": "scam_url_obfuscation",
+  "note": "@ 偽裝 165",
+  "min_score": 70
+ },
+ {
+  "url": "https://tw-stock-vip.top:8443/#/pages/login/login",
+  "expect": "scam",
+  "category": "scam_url_obfuscation",
+  "note": "非標準埠 + uni-app",
+  "min_score": 70
+ },
+ {
+  "url": "http://usdt-ex.vip:8080/",
+  "expect": "scam",
+  "category": "scam_url_obfuscation",
+  "note": "非標準埠 8080 + http",
+  "min_score": 70
+ },
+ {
+  "url": "http://103.45.67.89/h5/#/register",
+  "expect": "scam",
+  "category": "scam_url_obfuscation",
+  "note": "IP 直連 + h5 註冊",
+  "min_score": 70
+ },
+ {
+  "url": "http://45.12.34.56:8888/login",
+  "expect": "scam",
+  "category": "scam_url_obfuscation",
+  "note": "IP 直連 + 非標準埠",
+  "min_score": 70
+ },
+ {
+  "url": "https://www.google.com/url?q=https://binance-tw-pro.top/&sa=D",
+  "expect": "scam",
+  "category": "scam_url_obfuscation",
+  "note": "Google 跳轉包裝假交易所"
+ },
+ {
+  "url": "https://tw-redirect.top/go?url=https://stock-vip88.vip/h5/#/register",
+  "expect": "scam",
+  "category": "scam_url_obfuscation",
+  "note": "雙重跳轉",
+  "min_score": 70
+ },
+ {
+  "url": "https://bit.ly/3AbCdEf?invitecode=8812",
+  "expect": "scam",
+  "category": "scam_url_obfuscation",
+  "note": "短網址 + invitecode 參數"
+ },
+ {
+  "url": "https://reurl.cc/AbCdEf?ref=stockvip",
+  "expect": "scam",
+  "category": "scam_url_obfuscation",
+  "note": "台灣短網址 + 可疑參數"
+ },
+ {
+  "url": "https://tinyurl.com/tw-usdt-claim",
+  "expect": "scam",
+  "category": "scam_url_obfuscation",
+  "note": "短網址 + claim 詞"
+ },
+ {
+  "url": "https://binance.com.tw-verify-account.top/",
+  "expect": "scam",
+  "category": "scam_url_obfuscation",
+  "note": "官方網域放子網域偽裝",
+  "min_score": 70
+ },
+ {
+  "url": "https://line.me/ti/g2/AbCdEfGhIjKlMnOp?utm_source=invitation",
+  "expect": "scam",
+  "category": "scam_social_invite",
+  "note": "LINE 群組邀請 g2（需查證）"
+ },
+ {
+  "url": "https://line.me/R/ti/g/AbCdEf123",
+  "expect": "scam",
+  "category": "scam_social_invite",
+  "note": "LINE 群組邀請 R/ti/g"
+ },
+ {
+  "url": "https://lin.ee/AbC1234",
+  "expect": "scam",
+  "category": "scam_social_invite",
+  "note": "lin.ee 短連結（需查證）"
+ },
+ {
+  "url": "https://t.me/+AbCdEfGhIjK1234",
+  "expect": "scam",
+  "category": "scam_social_invite",
+  "note": "Telegram 私密群組邀請"
+ },
+ {
+  "url": "https://t.me/joinchat/AAAAAEabcdef",
+  "expect": "scam",
+  "category": "scam_social_invite",
+  "note": "Telegram joinchat"
+ },
+ {
+  "url": "https://chat.whatsapp.com/AbCdEfGhIjKlMn",
+  "expect": "scam",
+  "category": "scam_social_invite",
+  "note": "WhatsApp 群組邀請"
+ },
+ {
+  "url": "https://discord.gg/abcd1234",
+  "expect": "scam",
+  "category": "scam_social_invite",
+  "note": "Discord 邀請（需查證）"
+ },
+ {
+  "url": "https://line.me/ti/g2/StockVipTeacher888",
+  "expect": "scam",
+  "category": "scam_social_invite",
+  "note": "LINE 群組：飆股老師"
+ },
+ {
+  "url": "https://newedran.com/h5/#/",
+  "expect": "scam",
+  "category": "dataset",
+  "note": "原始詐騙樣本 newedran.com 改寫為完整 https 網址＋常見路徑（測 scheme/路徑捷徑）"
+ },
+ {
+  "url": "https://sv.citics5388.com/#/pages/login/login",
+  "expect": "scam",
+  "category": "dataset",
+  "note": "原始詐騙樣本 sv.citics5388.com 改寫為完整 https 網址＋常見路徑（測 scheme/路徑捷徑）"
+ },
+ {
+  "url": "https://sm-shopwxbest.top/register?code=8812",
+  "expect": "scam",
+  "category": "dataset",
+  "note": "原始詐騙樣本 sm-shopwxbest.top 改寫為完整 https 網址＋常見路徑（測 scheme/路徑捷徑）"
+ },
+ {
+  "url": "https://www.chengjie.finance/#/pages/index/index",
+  "expect": "scam",
+  "category": "dataset",
+  "note": "原始詐騙樣本 www.chengjie.finance 改寫為完整 https 網址＋常見路徑（測 scheme/路徑捷徑）"
+ },
+ {
+  "url": "https://contimee.net/wap/#/pages/login/login?invitecode=A1B2",
+  "expect": "scam",
+  "category": "dataset",
+  "note": "原始詐騙樣本 contimee.net/wap 改寫為完整 https 網址＋常見路徑（測 scheme/路徑捷徑）"
+ },
+ {
+  "url": "https://www.yuujxbcjnxe38.cc/h5/#/register",
+  "expect": "scam",
+  "category": "dataset",
+  "note": "原始詐騙樣本 www.yuujxbcjnxe38.cc 改寫為完整 https 網址＋常見路徑（測 scheme/路徑捷徑）"
+ },
+ {
+  "url": "https://www.khurttrus.cc/zh-tw/login",
+  "expect": "scam",
+  "category": "dataset",
+  "note": "原始詐騙樣本 www.khurttrus.cc 改寫為完整 https 網址＋常見路徑（測 scheme/路徑捷徑）"
+ },
+ {
+  "url": "https://ab.cvauro.com/h5/#/",
+  "expect": "scam",
+  "category": "dataset",
+  "note": "原始詐騙樣本 ab.cvauro.com 改寫為完整 https 網址＋常見路徑（測 scheme/路徑捷徑）"
+ },
+ {
+  "url": "https://www.poyabyuys.com/SalePage/Index/123",
+  "expect": "scam",
+  "category": "dataset",
+  "note": "原始詐騙樣本 www.poyabyuys.com 改寫為完整 https 網址＋常見路徑（測 scheme/路徑捷徑）"
+ },
+ {
+  "url": "https://www.quantoption.ink/register?code=8812",
+  "expect": "scam",
+  "category": "dataset",
+  "note": "原始詐騙樣本 www.quantoption.ink 改寫為完整 https 網址＋常見路徑（測 scheme/路徑捷徑）"
+ },
+ {
+  "url": "https://aurex.icu/#/pages/login/login",
+  "expect": "scam",
+  "category": "dataset",
+  "note": "原始詐騙樣本 aurex.icu 改寫為完整 https 網址＋常見路徑（測 scheme/路徑捷徑）"
+ },
+ {
+  "url": "https://www.ygjsp.one/download.html",
+  "expect": "scam",
+  "category": "dataset",
+  "note": "原始詐騙樣本 www.ygjsp.one 改寫為完整 https 網址＋常見路徑（測 scheme/路徑捷徑）"
+ },
+ {
+  "url": "https://skddxt.com/wap/#/",
+  "expect": "scam",
+  "category": "dataset",
+  "note": "原始詐騙樣本 skddxt.com/wap 改寫為完整 https 網址＋常見路徑（測 scheme/路徑捷徑）"
+ },
+ {
+  "url": "https://www.walmarvahu.com/zh-tw/",
+  "expect": "scam",
+  "category": "dataset",
+  "note": "原始詐騙樣本 www.walmarvahu.com 改寫為完整 https 網址＋常見路徑（測 scheme/路徑捷徑）"
+ },
+ {
+  "url": "https://www.faebookpang.com/login",
+  "expect": "scam",
+  "category": "dataset",
+  "note": "原始詐騙樣本 www.faebookpang.com 改寫為完整 https 網址＋常見路徑（測 scheme/路徑捷徑）"
+ },
+ {
+  "url": "https://www.chengjie-invest.forex/h5/#/register?inviteCode=99",
+  "expect": "scam",
+  "category": "dataset",
+  "note": "原始詐騙樣本 www.chengjie-invest.forex 改寫為完整 https 網址＋常見路徑（測 scheme/路徑捷徑）"
+ },
+ {
+  "url": "https://h5.cjkiscl.com/#/pages/login/login",
+  "expect": "scam",
+  "category": "dataset",
+  "note": "原始詐騙樣本 h5.cjkiscl.com 改寫為完整 https 網址＋常見路徑（測 scheme/路徑捷徑）"
+ },
+ {
+  "url": "https://m.bit-ligne.click/#/pages/register/register",
+  "expect": "scam",
+  "category": "dataset",
+  "note": "原始詐騙樣本 m.bit-ligne.click 改寫為完整 https 網址＋常見路徑（測 scheme/路徑捷徑）"
+ },
+ {
+  "url": "https://www.tw-trade.vip/tw/index.html",
+  "expect": "scam",
+  "category": "dataset",
+  "note": "原始詐騙樣本 www.tw-trade.vip 改寫為完整 https 網址＋常見路徑（測 scheme/路徑捷徑）"
+ },
+ {
+  "url": "https://gate.iomxr.com/h5/#/",
+  "expect": "scam",
+  "category": "dataset",
+  "note": "原始詐騙樣本 gate.iomxr.com 改寫為完整 https 網址＋常見路徑（測 scheme/路徑捷徑）"
+ },
+ {
+  "url": "https://xvopcrypto.com/register?code=8812",
+  "expect": "scam",
+  "category": "dataset",
+  "note": "原始詐騙樣本 xvopcrypto.com 改寫為完整 https 網址＋常見路徑（測 scheme/路徑捷徑）"
+ },
+ {
+  "url": "https://h5.mgxoweb.top/#/",
+  "expect": "scam",
+  "category": "dataset",
+  "note": "原始詐騙樣本 h5.mgxoweb.top 改寫為完整 https 網址＋常見路徑（測 scheme/路徑捷徑）"
+ },
+ {
+  "url": "https://www.vvipstoreonline.cc/zh-tw/shop",
+  "expect": "scam",
+  "category": "dataset",
+  "note": "原始詐騙樣本 www.vvipstoreonline.cc 改寫為完整 https 網址＋常見路徑（測 scheme/路徑捷徑）"
+ },
+ {
+  "url": "https://ylgj9.cyou/#/pages/login/login",
+  "expect": "scam",
+  "category": "dataset",
+  "note": "原始詐騙樣本 ylgj9.cyou 改寫為完整 https 網址＋常見路徑（測 scheme/路徑捷徑）"
+ },
+ {
+  "url": "https://www.vip-tiikonline.cc/www/index.html",
+  "expect": "scam",
+  "category": "dataset",
+  "note": "原始詐騙樣本 www.vip-tiikonline.cc/www 改寫為完整 https 網址＋常見路徑（測 scheme/路徑捷徑）"
+ },
+ {
+  "url": "https://m.bitorxglobal.net/h5/#/login",
+  "expect": "scam",
+  "category": "dataset",
+  "note": "原始詐騙樣本 m.bitorxglobal.net 改寫為完整 https 網址＋常見路徑（測 scheme/路徑捷徑）"
+ },
+ {
+  "url": "https://www.realbitus.vip/register?code=8812",
+  "expect": "scam",
+  "category": "dataset",
+  "note": "原始詐騙樣本 www.realbitus.vip 改寫為完整 https 網址＋常見路徑（測 scheme/路徑捷徑）"
+ },
+ {
+  "url": "https://tikmallod.top/www/#/",
+  "expect": "scam",
+  "category": "dataset",
+  "note": "原始詐騙樣本 tikmallod.top/www 改寫為完整 https 網址＋常見路徑（測 scheme/路徑捷徑）"
+ },
+ {
+  "url": "https://www.tsmcec.com/zh-tw/",
+  "expect": "scam",
+  "category": "dataset",
+  "note": "原始詐騙樣本 www.tsmcec.com 改寫為完整 https 網址＋常見路徑（測 scheme/路徑捷徑）"
+ },
+ {
+  "url": "https://www.du96.net/h5/#/",
+  "expect": "scam",
+  "category": "dataset",
+  "note": "原始詐騙樣本 www.du96.net 改寫為完整 https 網址＋常見路徑（測 scheme/路徑捷徑）"
+ },
+ {
+  "url": "https://www.samsung.com",
+  "expect": "benign",
+  "category": "dataset",
+  "note": "原始正常樣本 www.samsung.com 補 https://"
+ },
+ {
+  "url": "https://www.mgmotor.com.tw/home/home.html",
+  "expect": "benign",
+  "category": "dataset",
+  "note": "原始正常樣本（原樣）"
+ },
+ {
+  "url": "https://www.philips.com.tw",
+  "expect": "benign",
+  "category": "dataset",
+  "note": "原始正常樣本 www.philips.com.tw 補 https://"
+ },
+ {
+  "url": "https://www.corel.com/tw",
+  "expect": "benign",
+  "category": "dataset",
+  "note": "原始正常樣本 www.corel.com/tw 補 https://"
+ },
+ {
+  "url": "https://www.trplus.com.tw",
+  "expect": "benign",
+  "category": "dataset",
+  "note": "原始正常樣本（原樣）"
+ },
+ {
+  "url": "https://tw.ncsoft.com/aion2/teaser/index",
+  "expect": "benign",
+  "category": "dataset",
+  "note": "原始正常樣本（原樣）"
+ },
+ {
+  "url": "https://www.yunchenpasta.com.tw/menu/23",
+  "expect": "benign",
+  "category": "dataset",
+  "note": "原始正常樣本（原樣）"
+ },
+ {
+  "url": "https://www.trendmicro.com/zh_tw",
+  "expect": "benign",
+  "category": "dataset",
+  "note": "原始正常樣本 www.trendmicro.com/zh_tw 補 https://"
+ },
+ {
+  "url": "https://www.mazda.com.tw/",
+  "expect": "benign",
+  "category": "dataset",
+  "note": "原始正常樣本（原樣）"
+ },
+ {
+  "url": "https://video.friday.tw/",
+  "expect": "benign",
+  "category": "dataset",
+  "note": "原始正常樣本（原樣）"
+ },
+ {
+  "url": "https://tw.pandora.net/",
+  "expect": "benign",
+  "category": "dataset",
+  "note": "原始正常樣本（原樣）"
+ },
+ {
+  "url": "https://www.johnsonfitness.com.tw",
+  "expect": "benign",
+  "category": "dataset",
+  "note": "原始正常樣本 www.johnsonfitness.com.tw 補 https://"
+ },
+ {
+  "url": "https://www.vans.com.tw/",
+  "expect": "benign",
+  "category": "dataset",
+  "note": "原始正常樣本（原樣）"
+ },
+ {
+  "url": "https://www.loccitane.com.tw",
+  "expect": "benign",
+  "category": "dataset",
+  "note": "原始正常樣本 www.loccitane.com.tw 補 https://"
+ },
+ {
+  "url": "https://www.lorealparis.com.tw/",
+  "expect": "benign",
+  "category": "dataset",
+  "note": "原始正常樣本（原樣）"
+ },
+ {
+  "url": "https://www.sharp.com.tw",
+  "expect": "benign",
+  "category": "dataset",
+  "note": "原始正常樣本 www.sharp.com.tw 補 https://"
+ },
+ {
+  "url": "https://www.newbalance.com.tw",
+  "expect": "benign",
+  "category": "dataset",
+  "note": "原始正常樣本（原樣）"
+ },
+ {
+  "url": "https://www.twitch.tv",
+  "expect": "benign",
+  "category": "dataset",
+  "note": "原始正常樣本 www.twitch.tv 補 https://"
+ },
+ {
+  "url": "https://www.guerlain.com/tw/zh-tw",
+  "expect": "benign",
+  "category": "dataset",
+  "note": "原始正常樣本（原樣）"
+ },
+ {
+  "url": "https://www.pazzo.com.tw",
+  "expect": "benign",
+  "category": "dataset",
+  "note": "原始正常樣本（原樣）"
+ },
+ {
+  "url": "https://www.urban-research.tw",
+  "expect": "benign",
+  "category": "dataset",
+  "note": "原始正常樣本 www.urban-research.tw 補 https://"
+ },
+ {
+  "url": "https://www.kose.com.tw/",
+  "expect": "benign",
+  "category": "dataset",
+  "note": "原始正常樣本（原樣）"
+ },
+ {
+  "url": "https://overwatch.blizzard.com/zh-tw/",
+  "expect": "benign",
+  "category": "dataset",
+  "note": "原始正常樣本（原樣）"
+ },
+ {
+  "url": "https://www.miele.tw",
+  "expect": "benign",
+  "category": "dataset",
+  "note": "原始正常樣本 www.miele.tw 補 https://"
+ },
+ {
+  "url": "https://www.seagate.com/tw/zh/",
+  "expect": "benign",
+  "category": "dataset",
+  "note": "原始正常樣本（原樣）"
+ },
+ {
+  "url": "https://www.avast.com/zh-tw",
+  "expect": "benign",
+  "category": "dataset",
+  "note": "原始正常樣本 www.avast.com/zh-tw 補 https://"
+ },
+ {
+  "url": "https://www.riotgames.com",
+  "expect": "benign",
+  "category": "dataset",
+  "note": "原始正常樣本 www.riotgames.com 補 https://"
+ },
+ {
+  "url": "https://www.toysrus.com.tw/zh-tw/",
+  "expect": "benign",
+  "category": "dataset",
+  "note": "原始正常樣本（原樣）"
+ },
+ {
+  "url": "https://www.tatung.com.tw",
+  "expect": "benign",
+  "category": "dataset",
+  "note": "原始正常樣本 www.tatung.com.tw 補 https://"
+ }
+]

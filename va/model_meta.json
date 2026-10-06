@@ -1,0 +1,217 @@
+{
+  "project": "Truth",
+  "model_file": "scam_model.pkl",
+  "format": "truthmark-model-bundle/1",
+  "sklearn_version": "1.8.0",
+  "numpy_version": "2.4.4",
+  "python_version": "3.12.2",
+  "feature_count": 46,
+  "feature_names": [
+    "url_length",
+    "domain_length",
+    "path_length",
+    "query_length",
+    "digit_ratio",
+    "hyphen_count",
+    "dot_count",
+    "special_chars",
+    "subdomain_depth",
+    "path_depth",
+    "query_params",
+    "is_https",
+    "is_ip_address",
+    "suspicious_tld",
+    "has_scam_word",
+    "brand_in_sld",
+    "has_utm",
+    "has_gclid",
+    "double_http",
+    "long_domain",
+    "domain_entropy",
+    "has_shortener",
+    "gambling_number_pattern",
+    "brand_typo_like",
+    "cloud_hosting",
+    "mobile_lure_path",
+    "suspicious_keyword_in_domain",
+    "many_subdomains",
+    "contains_percent_encoding",
+    "levenshtein_brand_dist",
+    "newly_registered_like",
+    "tld_risk_level",
+    "gambling_keyword",
+    "investment_lure_keyword",
+    "crypto_exchange_lure",
+    "brand_impersonation",
+    "free_hosting_platform",
+    "tunnel_or_ephemeral_host",
+    "social_invite_link",
+    "punycode_domain",
+    "url_has_at_symbol",
+    "non_standard_port",
+    "sld_digit_count",
+    "sld_length",
+    "path_scam_route",
+    "sld_randomness"
+  ],
+  "feature_version": "7.1.0",
+  "feature_schema_id": "3563ef6db762",
+  "best_model": "GradientBoosting",
+  "params": {
+    "n_estimators": 500,
+    "learning_rate": 0.03,
+    "max_depth": 4,
+    "subsample": 0.8,
+    "max_features": "sqrt",
+    "min_samples_leaf": 3
+  },
+  "calibration": {
+    "method": "sigmoid",
+    "ensemble": true,
+    "n_splits": 5,
+    "target_prior": 0.2,
+    "real_scam_prior": 0.4743,
+    "calibration_data": "每個子模型以未參與訓練之 group 的真實樣本校準（依目標詐騙比例加權，prior shift）",
+    "brier_uncalibrated": 0.0767,
+    "brier": 0.0682,
+    "method_selection": {
+      "target_prior": 0.2,
+      "metric": "brier_target_prior",
+      "sigmoid": 0.0682,
+      "isotonic": 0.0685
+    },
+    "brier_metric": "brier_target_prior"
+  },
+  "thresholds": {
+    "medium": 0.4,
+    "high": 0.7
+  },
+  "metrics": {
+    "evaluation": "OOF（StratifiedGroupKFold 5 折，只算測試組真實樣本；校準為巢狀 group-CV）",
+    "pr_auc": 0.9363,
+    "roc_auc": 0.9363,
+    "brier": 0.1263,
+    "brier_uncalibrated": 0.1039,
+    "log_loss": 0.3954,
+    "at_0.40": {
+      "threshold": 0.4,
+      "precision": 0.9284,
+      "recall": 0.7028,
+      "f1": 0.8,
+      "f2": 0.7387,
+      "fpr": 0.0489,
+      "accuracy": 0.8333,
+      "confusion": [
+        [
+          525,
+          27
+        ],
+        [
+          148,
+          350
+        ]
+      ],
+      "precision_target_prior": 0.7822
+    },
+    "at_0.70": {
+      "threshold": 0.7,
+      "precision": 0.9928,
+      "recall": 0.5502,
+      "f1": 0.708,
+      "f2": 0.6041,
+      "fpr": 0.0036,
+      "accuracy": 0.7848,
+      "confusion": [
+        [
+          550,
+          2
+        ],
+        [
+          224,
+          274
+        ]
+      ],
+      "precision_target_prior": 0.9743
+    },
+    "best_f2_threshold": {
+      "threshold": 0.05,
+      "f2": 0.8892,
+      "precision": 0.6671,
+      "recall": 0.9699
+    },
+    "real_samples": 1050,
+    "real_scam_prior": 0.4743,
+    "target_prior": 0.2,
+    "shape_robustness_pr_auc": {
+      "original": 0.9363,
+      "flip": 0.9376,
+      "ad": 0.9323
+    },
+    "heldout_templates": {
+      "n": 1964,
+      "scam_recall_0.40": 0.8901,
+      "benign_fpr_0.40": 0.0581,
+      "hard_negative_auc": 0.9177
+    },
+    "brier_target_prior": 0.0682,
+    "brier_uncalibrated_target_prior": 0.0767,
+    "dataset_prior_calibration": {
+      "brier": 0.1014,
+      "log_loss": 0.3187,
+      "at_0.40": {
+        "threshold": 0.4,
+        "precision": 0.8218,
+        "recall": 0.8614,
+        "f1": 0.8412,
+        "f2": 0.8532,
+        "fpr": 0.1685,
+        "accuracy": 0.8457,
+        "confusion": [
+          [
+            459,
+            93
+          ],
+          [
+            69,
+            429
+          ]
+        ]
+      },
+      "at_0.70": {
+        "threshold": 0.7,
+        "precision": 0.938,
+        "recall": 0.6988,
+        "f1": 0.8009,
+        "f2": 0.7364,
+        "fpr": 0.0417,
+        "accuracy": 0.8352,
+        "confusion": [
+          [
+            529,
+            23
+          ],
+          [
+            150,
+            348
+          ]
+        ]
+      }
+    }
+  },
+  "data_count": 5069,
+  "label_counts": {
+    "0": 2752,
+    "1": 2317
+  },
+  "real_count": 1050,
+  "real_label_counts": {
+    "0": 552,
+    "1": 498
+  },
+  "synthetic_count": 4019,
+  "synthetic_breakdown": {
+    "real_variants": 2055,
+    "templates": 1964
+  },
+  "trained_at": "2026-10-05T13:27:15"
+}

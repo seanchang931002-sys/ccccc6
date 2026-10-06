@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Truth－基於大數據之廣告行銷的稽核平台</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#45bff5;--blue-dark:#16668d;--sky:#bfeeff;--white:#ffffff;
+  --glass:rgba(255,255,255,.68);--glass-light:rgba(255,255,255,.38);
+  --text:#17425c;--muted:#5f7f92;
+  --safe:#16a34a;--safe-bg:rgba(34,197,94,.14);--safe-border:rgba(34,197,94,.26);
+  --danger:#be123c;--danger-bg:rgba(251,113,133,.14);--danger-border:rgba(251,113,133,.26);
+  --warn:#b45309;--warn-bg:rgba(245,158,11,.14);--warn-border:rgba(245,158,11,.28);
+  --neutral:#0369a1;--neutral-bg:rgba(56,189,248,.14);--neutral-border:rgba(56,189,248,.22);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{min-height:100vh;font-family:'Plus Jakarta Sans','Noto Sans TC',sans-serif;color:var(--text);overflow-x:hidden;background:#eaf9ff;font-size:15px}
+
+/* ── HERO ── */
+.hero{
+  position:relative;min-height:100vh;overflow:hidden;
+  background:
+    linear-gradient(90deg,rgba(255,255,255,.58) 0%,rgba(255,255,255,.18) 36%,rgba(120,215,255,.18) 100%),
+    radial-gradient(circle at 80% 15%,rgba(255,255,255,.95),transparent 26%),
+    linear-gradient(135deg,#c9eeff 0%,#e8f9ff 50%,#b8eaff 100%);
+  background-size:cover;background-position:center;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(circle at 85% 20%,rgba(255,255,255,.8),transparent 20%),
+    linear-gradient(135deg,rgba(255,255,255,.18),rgba(61,190,240,.14));
+  pointer-events:none;z-index:1;
+}
+.hero::after{
+  content:'';position:absolute;right:-120px;top:-80px;width:620px;height:130vh;
+  background:linear-gradient(135deg,rgba(74,197,245,.78),rgba(118,225,255,.5));
+  clip-path:polygon(30% 0,100% 0,72% 100%,0 100%);
+  z-index:1;opacity:.72;
+}
+.sparkle{position:absolute;width:6px;height:6px;background:white;border-radius:50%;box-shadow:0 0 10px white,0 0 18px rgba(255,255,255,.8);animation:twinkle 2.6s infinite ease-in-out;z-index:3}
+.s1{right:18%;top:18%;animation-delay:.1s}.s2{right:12%;top:33%;animation-delay:.5s}
+.s3{right:24%;top:48%;animation-delay:.9s}.s4{right:8%;top:62%;animation-delay:1.2s}
+.s5{right:32%;top:28%;animation-delay:1.5s}
+@keyframes twinkle{0%,100%{transform:scale(.6);opacity:.35}50%{transform:scale(1.5);opacity:1}}
+
+/* ── HEADER ── */
+.header{position:fixed;top:0;left:0;width:100%;padding:26px 34px;z-index:20;display:flex;align-items:center;justify-content:space-between;pointer-events:none}
+.logo{pointer-events:auto;display:flex;align-items:center;gap:10px;padding:10px 18px;border-radius:999px;background:rgba(255,255,255,.54);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.68);box-shadow:0 12px 28px rgba(38,145,190,.16);font-weight:900;font-size:18px;color:#247aa3;letter-spacing:-1px}
+.logo-icon{width:34px;height:34px;display:grid;place-items:center}.logo-icon img{display:block;width:34px;height:34px}
+.nav{position:absolute;top:24px;left:50%;transform:translateX(-50%);pointer-events:auto;display:flex;align-items:center;gap:4px;padding:9px 18px;border-radius:999px;background:rgba(255,255,255,.62);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.78);box-shadow:0 14px 36px rgba(49,142,183,.2),inset 0 1px 0 rgba(255,255,255,.8)}
+.nav a{display:flex;align-items:center;gap:7px;text-decoration:none;color:#1f5d7d;font-size:16px;font-weight:900;padding:10px 18px;border-radius:999px;transition:.25s;white-space:nowrap}
+.nav a:hover{background:rgba(255,255,255,.72);color:#0797d4;transform:translateY(-1px)}
+.menu-btn{pointer-events:auto;width:58px;height:58px;border-radius:50%;border:none;cursor:pointer;background:linear-gradient(135deg,#40c7ff,#2cb2ea);color:white;display:grid;place-items:center;box-shadow:0 14px 28px rgba(32,149,206,.35),inset 0 1px 0 rgba(255,255,255,.4);transition:.25s}
+.menu-btn:hover{transform:translateY(-2px) scale(1.04)}
+
+/* ── HERO CONTENT ── */
+.hero-content{position:relative;z-index:5;min-height:100vh;padding:150px 7% 80px;display:flex;align-items:center}
+.intro-panel{width:min(540px,100%);margin-top:40px}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;background:rgba(255,255,255,.72);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.86);color:#1d7198;font-size:13px;font-weight:900;letter-spacing:1px;box-shadow:0 10px 26px rgba(44,145,190,.13);margin-bottom:22px}
+.title{font-size:clamp(38px,5vw,58px);line-height:1.04;letter-spacing:-2px;font-weight:900;color:#185b7c;text-shadow:0 4px 0 rgba(255,255,255,.72),0 12px 24px rgba(41,126,166,.18);margin-bottom:18px}
+.title span{color:#37bdf2}
+.subtitle{font-size:17px;line-height:1.9;color:#446f86;font-weight:700;margin-bottom:28px}
+.scanner-card{position:relative;width:min(620px,100%);padding:20px;border-radius:30px;background:rgba(255,255,255,.72);backdrop-filter:blur(22px);border:1px solid rgba(255,255,255,.86);box-shadow:0 24px 54px rgba(34,122,164,.2),inset 0 1px 0 rgba(255,255,255,.9)}
+.scanner-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px;padding:0 4px}
+.scanner-title strong{color:#1e6c90;font-size:15px}
+.scanner-title span{font-size:12px;font-weight:900;color:#20a7df;background:rgba(69,191,245,.12);border:1px solid rgba(69,191,245,.2);padding:7px 10px;border-radius:999px}
+.search-box{display:flex;gap:12px}
+.search-box input{flex:1;border:none;outline:none;border-radius:20px;padding:17px 19px;background:rgba(255,255,255,.82);border:1px solid rgba(87,179,220,.22);color:#17425c;font-size:15px;font-weight:700}
+.search-box input::placeholder{color:#8baabd}
+.search-box input:focus{border-color:#45bff5;box-shadow:0 0 0 4px rgba(69,191,245,.14)}
+.search-box button{border:none;cursor:pointer;border-radius:20px;padding:0 28px;color:white;font-size:15px;font-weight:900;background:linear-gradient(135deg,#58d4ff,#28aee8);box-shadow:0 12px 24px rgba(40,174,232,.34),inset 0 1px 0 rgba(255,255,255,.45);transition:.25s;white-space:nowrap}
+.search-box button:hover{transform:translateY(-2px);box-shadow:0 16px 32px rgba(40,174,232,.45)}
+#loading{display:none;margin-top:14px;color:#259ac9;font-size:14px;font-weight:900;letter-spacing:1px;animation:pulse 1.3s infinite}
+@keyframes pulse{0%,100%{opacity:.45}50%{opacity:1}}
+.scroll-down{position:absolute;z-index:6;left:50%;bottom:28px;transform:translateX(-50%);width:42px;height:42px;display:grid;place-items:center;color:#1d7198;opacity:1;font-size:32px;animation:downFloat 1.6s infinite ease-in-out}
+@keyframes downFloat{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+
+/* ── RESULT SECTION ── */
+.result-section{position:relative;z-index:8;padding:70px 6%;background:linear-gradient(180deg,#eaf9ff,#ffffff)}
+.result-wrapper{display:none;max-width:1180px;margin:0 auto;animation:fadeIn .5s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.result-header{text-align:center;margin-bottom:28px}
+.result-header h2{font-size:clamp(24px,4vw,36px);font-weight:900;color:#1b6386;margin-bottom:10px}
+.result-header p{color:#6d91a6;font-weight:700}
+
+/* ── VERDICT PANEL ── */
+.verdict-panel{position:relative;overflow:hidden;padding:42px;border-radius:34px;text-align:center;background:rgba(255,255,255,.78);backdrop-filter:blur(22px);border:1px solid rgba(255,255,255,.9);box-shadow:0 24px 58px rgba(47,136,177,.18);margin-bottom:24px}
+.verdict-panel::before{content:'';position:absolute;inset:-80px;background:radial-gradient(circle at 20% 20%,rgba(90,210,255,.25),transparent 30%),radial-gradient(circle at 80% 10%,rgba(255,204,112,.2),transparent 24%);pointer-events:none}
+.verdict-content{position:relative;z-index:2}
+.verdict-badge{display:inline-flex;align-items:center;justify-content:center;padding:14px 28px;border-radius:999px;background:rgba(255,255,255,.8);border:1px solid rgba(69,191,245,.2);color:#1d7198;font-size:20px;font-weight:900;margin-bottom:16px}
+.target-url{display:inline-block;max-width:100%;word-break:break-all;color:#63889d;background:rgba(240,250,255,.78);padding:12px 20px;border-radius:16px;font-size:14px;font-weight:700;margin-bottom:18px}
+#scoreLabel{font-size:clamp(64px,10vw,88px);font-weight:900;letter-spacing:-4px;margin:8px 0;text-shadow:0 5px 0 rgba(255,255,255,.9),0 14px 26px rgba(61,154,196,.15)}
+.glow-bar-bg{width:100%;max-width:720px;height:18px;margin:24px auto;border-radius:999px;overflow:hidden;background:rgba(211,238,249,.8);border:1px solid rgba(255,255,255,.9)}
+.glow-bar-fill{height:100%;width:0%;border-radius:999px;transition:1.2s cubic-bezier(.25,1,.5,1)}
+.source-tag{color:#6c8da1;font-size:14px;font-weight:900;letter-spacing:.6px;margin-top:10px}
+
+/* ── AUDIT PANEL ── */
+.audit-panel{padding:32px;border-radius:32px;background:rgba(255,255,255,.72);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.9);box-shadow:0 18px 42px rgba(47,136,177,.13)}
+.panel-section-title{font-size:22px;font-weight:900;color:#1b6386;margin-bottom:8px}
+.panel-section-sub{font-size:13px;color:#6d91a6;font-weight:700;margin-bottom:24px}
+
+/* ── 特徵卡片 Grid ── */
+.features-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+
+.feature-card{
+  padding:20px 22px;border-radius:22px;
+  background:linear-gradient(180deg,rgba(255,255,255,.92),rgba(239,250,255,.82));
+  border:1px solid rgba(69,191,245,.18);
+  box-shadow:0 8px 22px rgba(47,136,177,.08);
+  transition:.25s;display:flex;flex-direction:column;gap:4px;
+}
+.feature-card:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(47,136,177,.16);border-color:rgba(69,191,245,.36)}
+
+.feature-key{font-size:11px;color:#40a7cf;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:2px}
+.feature-title{font-size:15px;font-weight:900;color:#245d79;margin-bottom:6px}
+.feature-desc{font-size:12.5px;line-height:1.65;color:var(--muted);font-weight:700;margin-bottom:10px}
+.feature-value-row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:10px;margin-top:auto}
+.feature-value{font-size:28px;font-weight:900;color:#17425c;letter-spacing:-1px;white-space:nowrap}
+.feature-status{font-size:12px;font-weight:900;padding:6px 12px;border-radius:999px;white-space:nowrap;align-self:flex-end}
+
+/* ── 狀態顏色 ── */
+.status-alert{color:var(--danger);background:var(--danger-bg);border:1px solid var(--danger-border)}
+.status-safe{color:var(--safe);background:var(--safe-bg);border:1px solid var(--safe-border)}
+.status-warn{color:var(--warn);background:var(--warn-bg);border:1px solid var(--warn-border)}
+.status-neutral{color:var(--neutral);background:var(--neutral-bg);border:1px solid var(--neutral-border)}
+
+/* ── AI 摘要 ── */
+.ai-summary{
+  margin-top:24px;padding:26px 30px;border-radius:24px;
+  background:linear-gradient(135deg,rgba(224,245,255,.82),rgba(240,252,255,.92));
+  border:1px solid rgba(69,191,245,.22);
+  box-shadow:0 10px 28px rgba(47,136,177,.1);
+}
+.ai-summary-title{font-size:14px;font-weight:900;color:#1d7198;margin-bottom:12px;letter-spacing:.5px}
+.ai-summary-body{font-size:15px;line-height:1.85;color:#2e5f7a;font-weight:700}
+.ai-summary-body strong{color:#e05050}
+.ai-highlight{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.ai-chip{font-size:12px;font-weight:900;padding:6px 14px;border-radius:999px}
+.chip-danger{color:var(--danger);background:var(--danger-bg);border:1px solid var(--danger-border)}
+.chip-safe{color:var(--safe);background:var(--safe-bg);border:1px solid var(--safe-border)}
+.chip-warn{color:var(--warn);background:var(--warn-bg);border:1px solid var(--warn-border)}
+
+/* ── 回報按鈕 ── */
+.feedback-row{display:flex;align-items:center;gap:12px;margin-top:22px;flex-wrap:wrap}
+.feedback-label{font-size:13px;font-weight:900;color:#6d91a6}
+.btn-fb{font-size:13px;font-weight:900;padding:10px 20px;border-radius:999px;border:none;cursor:pointer;transition:.2s}
+.btn-fb:hover{transform:translateY(-2px)}
+.btn-scam{background:var(--danger-bg);color:var(--danger);border:1px solid var(--danger-border)}
+.btn-safe{background:var(--safe-bg);color:var(--safe);border:1px solid var(--safe-border)}
+.btn-fb:disabled{opacity:.4;cursor:not-allowed;transform:none}
+.btn-fb.done,.btn-fb.done:disabled{opacity:1;background:var(--safe-bg);color:var(--safe);border:1px solid var(--safe-border)}
+.btn-fb.fail,.btn-fb.fail:disabled{opacity:1;background:var(--warn-bg);color:var(--warn);border:1px solid var(--warn-border)}
+
+/* ── 圖示（icons.js：24×24 線條、currentColor）── */
+.ic{flex:none;display:inline-block}
+.ic-lead{vertical-align:-.18em;margin-right:.4em}
+.logo-icon{color:#16668d}
+.nav a .ic{color:#2a7ea6;transition:color .25s}
+.nav a:hover .ic{color:#0797d4}
+.badge .ic{color:#2a7ea6}
+.scanner-title strong{display:inline-flex;align-items:center;gap:8px}
+.scanner-title strong .ic{color:#2a7ea6}
+.scanner-title span{display:inline-flex;align-items:center;gap:6px}
+#loading .ic{color:#2a7ea6;vertical-align:-.2em;margin-right:6px}
+.scroll-down .ic{filter:drop-shadow(0 4px 10px rgba(42,126,166,.2))}
+.result-header h2{display:flex;align-items:center;justify-content:center;gap:12px}
+.result-header h2 .ic{color:#2a7ea6}
+.verdict-badge{gap:10px}
+.target-url .ic{color:#2a7ea6;vertical-align:-.2em;margin-right:8px}
+.source-tag .src-ic{vertical-align:-.2em;margin-right:6px}
+.src-inline{display:inline-flex;align-items:center;gap:5px;vertical-align:baseline;font-weight:900}
+.src-inline .ic{vertical-align:-.15em}
+.panel-section-title{display:flex;align-items:center;gap:10px}
+.panel-section-title .ic{color:#2a7ea6}
+.ai-summary-title{display:flex;align-items:center;gap:8px}
+.ai-summary-title .ic{color:#2a7ea6}
+.btn-fb{display:inline-flex;align-items:center;gap:7px}
+.empty-note{display:flex;align-items:center;justify-content:center;gap:8px}
+.feature-head{display:flex;align-items:center;gap:10px;margin-bottom:6px;min-height:34px}
+.feature-ico{flex:none;width:30px;height:30px;display:grid;place-items:center;border-radius:10px}
+.feature-head .feature-key{margin-bottom:0;min-width:0;overflow-wrap:anywhere;line-height:1.35}
+/* v7：特徵數量動態顯示、降級模式提示、版本標籤、通用特徵卡片 */
+[data-feature-count]{margin:0 .25em}
+.degraded-note{display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap;width:fit-content;max-width:100%;margin:10px auto 0;padding:6px 14px;border-radius:999px;font-size:13px;color:var(--warn);background:var(--warn-bg);border:1px solid var(--warn-border)}
+.degraded-note .ic{flex:none}
+.ver-tag{margin-top:8px;font-size:11px;font-weight:700;letter-spacing:.4px;color:#8baabd}
+.feature-generic{border-style:dashed}
+
+@media(max-width:900px){
+  .nav{display:none}.header{padding:18px}.logo{font-size:15px}
+  .hero-content{padding:130px 6% 90px;align-items:flex-end}
+  .intro-panel{width:100%;margin-top:0}
+  .title{font-size:38px}.subtitle{font-size:15px}
+  .search-box{flex-direction:column}.search-box button{height:54px}
+  .hero::after{opacity:.42;right:-260px}
+  #scoreLabel{font-size:64px}.verdict-panel{padding:28px 18px}.audit-panel{padding:20px}
+  .features-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="sparkle s1"></div><div class="sparkle s2"></div>
+  <div class="sparkle s3"></div><div class="sparkle s4"></div><div class="sparkle s5"></div>
+
+  <header class="header">
+    <div class="logo">
+      <div class="logo-icon"><img src="data:image/png;base64,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" alt="Truth" width="30" height="30"></div>
+      Truth
+    </div>
+    <nav class="nav">
+      <a href="#scanner"><i data-icon="search" data-size="18"></i>掃描</a>
+      <a href="#resultArea"><i data-icon="bar-chart" data-size="20"></i>結果</a>
+      <a href="#featuresGrid"><i data-icon="grid" data-size="18"></i>特徵矩陣</a>
+    </nav>
+    <button class="menu-btn" aria-label="選單"><i data-icon="menu" data-size="24"></i></button>
+  </header>
+
+  
+
+  <div class="hero-content">
+    <div class="intro-panel" id="scanner">
+      <div class="badge"><i data-icon="sparkle" data-size="14"></i>Truth AI Security Platform</div>
+      <h1 class="title">讓 AI 鑑定<br><span>廣告網址安全度</span></h1>
+      <p class="subtitle">輸入廣告網址，系統以<span data-feature-count>多項</span>行為特徵全面解析風險，輸出完整分析報告。</p>
+
+      <div class="scanner-card">
+        <div class="scanner-title">
+          <strong><i data-icon="link" data-size="18"></i>URL Security Check</strong>
+          <span><i data-icon="sparkle" data-size="13"></i>AI CORE ONLINE</span>
+        </div>
+        <div class="search-box">
+          <input type="text" id="targetInput" placeholder="輸入想要分析的廣告網址...">
+          <button id="analyzeBtn">開始鑑定</button>
+        </div>
+        <div id="loading"><i data-icon="zap" data-size="16"></i>AI 正在分析網址特徵中...</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-down"><i data-icon="chevron-down" data-size="32"></i></div>
+</section>
+
+<!-- ── 結果區 ── -->
+<section class="result-section">
+  <div class="result-wrapper" id="resultArea">
+
+    <div class="result-header">
+      <h2><i data-icon="scan-search" data-size="34"></i>AI 廣告網址安全分析報告</h2>
+      <p>以下結果基於<span data-feature-count>多項</span> URL 行為特徵計算，僅供參考，不應作為唯一判斷依據。</p>
+    </div>
+
+    <!-- 判決 -->
+    <div class="verdict-panel" id="resultBoard">
+      <div class="verdict-content">
+        <div class="verdict-badge" id="verdictLabel">ANALYSIS COMPLETE</div>
+        <div class="target-url" id="targetUrlText"><i data-icon="link" data-size="16" class="ic-lead"></i></div>
+        <div id="scoreLabel">0%</div>
+        <div class="glow-bar-bg">
+          <div class="glow-bar-fill" id="glowFill"></div>
+        </div>
+        <div class="source-tag" id="sourceBadge">AI CORE READY</div>
+      </div>
+    </div>
+
+    <!-- 特徵矩陣 -->
+    <div class="audit-panel">
+      <div class="panel-section-title" id="featuresGrid"><i data-icon="grid" data-size="22"></i>URL 行為特徵分析矩陣</div>
+      <div class="panel-section-sub">共<span data-feature-count>多項</span>特徵維度 · 每項均對應風險等級<span data-feature-version></span></div>
+      <div class="features-grid" id="featuresGridInner"></div>
+
+      <!-- AI 摘要 -->
+      <div class="ai-summary" id="aiSummary" style="display:none">
+        <div class="ai-summary-title"><i data-icon="bot" data-size="20"></i>AI 分析摘要</div>
+        <div class="ai-summary-body" id="aiSummaryText"></div>
+        <div class="ai-highlight" id="aiHighlight"></div>
+      </div>
+
+      <!-- 回報 -->
+      <div class="feedback-row">
+        <span class="feedback-label">判斷有誤？</span>
+        <button class="btn-fb btn-scam" id="btnScam"><i data-icon="flag" data-size="16"></i>回報為詐騙</button>
+        <button class="btn-fb btn-safe" id="btnSafe"><i data-icon="check-circle" data-size="16"></i>回報為正常</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!--
+  v5.0 修正：移除原本內嵌的假分數邏輯（前端自行 calcScore + setTimeout 模擬延遲，
+  完全沒呼叫 /predict，等於沒用到訓練好的模型／黑名單／硬規則）。
+  改為載入外部 script.js，實際呼叫後端 POST /predict，
+  使用真正的 GradientBoosting 模型 + 政府黑名單 + 硬規則 + 灰色地帶補強分數。
+-->
+<!-- truth-icons:start -->
+<script>
+/**
+ * Truth 共用圖示庫 — icons.js
+ * =============================================================================
+ * 取代全站 emoji，統一為「24×24 · 1.75 線寬 · 圓角端點 · currentColor」的簡約線條圖示。
+ * 圖示顏色一律由外層文字顏色（CSS color）決定，不寫死色票。
+ *
+ * 注意：此檔為「唯一來源」：
+ *    - 外掛：va/外掛/icons.js（本檔，由 popup.html 與 manifest content_scripts 載入）
+ *    - 網頁：va/index.html 內 truth-icons 標記區塊（起訖各一行 HTML 註解）
+ *      是本檔內容的完整複本（後端只提供 index.html / script.js / style.css，
+ *      無法另外提供 icons.js）。修改圖示請改本檔，再同步貼回 index.html。
+ *
+ * 用法：
+ *   TruthIcons.svg('search', { size: 18, cls: 'x' })   => SVG 字串（可放進 innerHTML）
+ *   TruthIcons.el('search',  { size: 18 })              => SVG DOM 元素（content script 用，
+ *                                                          不經 innerHTML，避開 Trusted Types）
+ *   <i data-icon="search" data-size="18"></i>            => 載入後自動替換為 SVG
+ *   TruthIcons.hydrate(rootEl)                           => 對動態插入的區塊手動替換
+ * =============================================================================
+ */
+(function (root) {
+  'use strict';
+
+  var ICONS = {
+    /* ── 品牌 / 風險等級 ─────────────────────────────────────────── */
+    'shield': '<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>',
+    'shield-check': '<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/>',
+    'shield-alert': '<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="M12 8v4"/><path d="M12 16h.01"/>',
+    'alert-triangle': '<path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/>',
+    'alert-circle': '<circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/>',
+    'help-circle': '<circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/>',
+    'info': '<circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/>',
+    'check': '<path d="M20 6 9 17l-5-5"/>',
+    'check-circle': '<circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/>',
+    'x': '<path d="M18 6 6 18"/><path d="m6 6 12 12"/>',
+    'x-circle': '<circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/>',
+    'ban': '<circle cx="12" cy="12" r="10"/><path d="m4.9 4.9 14.2 14.2"/>',
+    'flag': '<path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><path d="M4 22v-7"/>',
+
+    /* ── 導覽 / 動作 ─────────────────────────────────────────────── */
+    'search': '<circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>',
+    'scan-search': '<path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3"/><path d="m16 16-2.9-2.9"/>',
+    'bar-chart': '<path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/>',
+    'grid': '<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/>',
+    'link': '<path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>',
+    'bot': '<path d="M12 8V4H8"/><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/>',
+    'sparkle': '<path d="M12 3Q13 11 21 12Q13 13 12 21Q11 13 3 12Q11 11 12 3Z"/>',
+    'settings': '<path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/>',
+    'file-text': '<path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/>',
+    'megaphone': '<path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/>',
+    'copy': '<rect x="8" y="8" width="14" height="14" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>',
+    'external-link': '<path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>',
+    'refresh': '<path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/>',
+    'lightbulb': '<path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.3 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/>',
+    'plug': '<path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8z"/>',
+    'zap': '<path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/>',
+    'menu': '<path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/>',
+    'chevron-down': '<path d="m6 9 6 6 6-6"/>',
+    'chevron-right': '<path d="m9 18 6-6-6-6"/>',
+    'trash': '<path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M10 11v6"/><path d="M14 11v6"/>',
+    'list': '<path d="M8 6h13"/><path d="M8 12h13"/><path d="M8 18h13"/><path d="M3 6h.01"/><path d="M3 12h.01"/><path d="M3 18h.01"/>',
+    'clock': '<circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>',
+    'clipboard-list': '<rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/>',
+    'sliders': '<path d="M21 4h-7"/><path d="M10 4H3"/><path d="M21 12h-9"/><path d="M8 12H3"/><path d="M21 20h-5"/><path d="M12 20H3"/><path d="M14 2v4"/><path d="M8 10v4"/><path d="M16 18v4"/>',
+    'pause-circle': '<circle cx="12" cy="12" r="10"/><path d="M10 15V9"/><path d="M14 15V9"/>',
+
+    /* ── 45 個 URL 特徵（與 script.js FEATURE_MAP 一一對應；v7 新增 14 個在本區最後）── */
+    'ruler': '<path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0z"/><path d="m14.5 12.5 2-2"/><path d="m11.5 9.5 2-2"/><path d="m8.5 6.5 2-2"/><path d="m17.5 15.5 2-2"/>',
+    'globe': '<circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>',
+    'route': '<circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/>',
+    'wrench': '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>',
+    'hash': '<path d="M4 9h16"/><path d="M4 15h16"/><path d="M10 3 8 21"/><path d="M16 3l-2 18"/>',
+    'minus': '<path d="M5 12h14"/>',
+    'ellipsis': '<circle cx="5" cy="12" r="1.2" fill="currentColor"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/><circle cx="19" cy="12" r="1.2" fill="currentColor"/>',
+    'asterisk': '<path d="M12 6v12"/><path d="M17.2 9 6.8 15"/><path d="m6.8 9 10.4 6"/>',
+    'layers': '<path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/>',
+    'folder': '<path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2z"/>',
+    'key': '<path d="m21 2-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0 3 3L22 7l-3-3m-3.5 3.5L19 4"/>',
+    'lock': '<rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',
+    'monitor': '<rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/>',
+    'tag': '<path d="M12.59 2.59A2 2 0 0 0 11.17 2H4a2 2 0 0 0-2 2v7.17a2 2 0 0 0 .59 1.42l8.7 8.7a2.43 2.43 0 0 0 3.42 0l6.58-6.58a2.43 2.43 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r="1" fill="currentColor"/>',
+    'mask': '<path d="M18 11c-1.5 0-2.5.5-3 2"/><path d="M4 6a2 2 0 0 0-2 2v4a5 5 0 0 0 5 5 8 8 0 0 1 5 2 8 8 0 0 1 5-2 5 5 0 0 0 5-5V8a2 2 0 0 0-2-2h-3a8 8 0 0 0-5 2 8 8 0 0 0-5-2z"/><path d="M6 11c1.5 0 2.5.5 3 2"/>',
+    'target': '<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>',
+    'repeat': '<path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/>',
+    'move-horizontal': '<path d="m18 8 4 4-4 4"/><path d="M2 12h20"/><path d="m6 8-4 4 4 4"/>',
+    'shuffle': '<path d="M2 18h1.4c1.3 0 2.5-.6 3.3-1.7l6.1-8.6c.7-1.1 2-1.7 3.3-1.7H22"/><path d="m18 2 4 4-4 4"/><path d="M2 6h1.9c1.5 0 2.9.9 3.6 2.2"/><path d="M22 18h-5.9c-1.3 0-2.6-.7-3.3-1.8l-.5-.8"/><path d="m18 14 4 4-4 4"/>',
+    'scissors': '<circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.12 15.88"/><path d="M14.47 14.48 20 20"/><path d="M8.12 8.12 12 12"/>',
+    'dice': '<rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8" cy="8" r="1.1" fill="currentColor"/><circle cx="16" cy="8" r="1.1" fill="currentColor"/><circle cx="12" cy="12" r="1.1" fill="currentColor"/><circle cx="8" cy="16" r="1.1" fill="currentColor"/><circle cx="16" cy="16" r="1.1" fill="currentColor"/>',
+    'type': '<path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/>',
+    'cloud': '<path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/>',
+    'smartphone': '<rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/>',
+    'eye': '<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
+    'network': '<rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/>',
+    'percent': '<path d="M19 5 5 19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/>',
+    'arrow-left-right': '<path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/>',
+
+    /* v7 新增特徵：TLD 風險、博弈／假投資／假交易所詞、品牌冒用、免費架站、臨時通道、
+       社群邀請、國際化網域、@ 偽裝、非標準埠、SLD 數字／長度、詐騙 App 路由 */
+    'gauge': '<path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/>',
+    'coins': '<circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/>',
+    'trending-up': '<path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/>',
+    'wallet': '<path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/>',
+    'badge-alert': '<path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76z"/><path d="M12 8v4"/><path d="M12 16h.01"/>',
+    'server': '<rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><path d="M6 6h.01"/><path d="M6 18h.01"/>',
+    'plug-zap': '<path d="M6.3 20.3a2.4 2.4 0 0 0 3.4 0L12 18l-6-6-2.3 2.3a2.4 2.4 0 0 0 0 3.4z"/><path d="m2 22 3-3"/><path d="M7.5 13.5 10 11"/><path d="M10.5 16.5 13 14"/><path d="m18 3-4 4h6l-4 4"/>',
+    'users': '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
+    'languages': '<path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/>',
+    'at-sign': '<circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"/>',
+    'door-open': '<path d="M13 4h3a2 2 0 0 1 2 2v14"/><path d="M2 20h3"/><path d="M13 20h9"/><path d="M10 12v.01"/><path d="M13 4.56v16.16a1 1 0 0 1-1.24.97L5 20V5.56a2 2 0 0 1 1.52-1.94l4-1A2 2 0 0 1 13 4.56z"/>',
+    'binary': '<rect x="14" y="14" width="4" height="6" rx="2"/><rect x="6" y="4" width="4" height="6" rx="2"/><path d="M6 20h4"/><path d="M14 10h4"/><path d="M6 14h2v6"/><path d="M14 4h2v6"/>',
+    'whole-word': '<circle cx="7" cy="12" r="3"/><path d="M10 9v6"/><circle cx="17" cy="12" r="3"/><path d="M14 7v8"/><path d="M22 17v1c0 .5-.5 1-1 1H3c-.5 0-1-.5-1-1v-1"/>',
+    'app-window': '<rect x="2" y="4" width="20" height="16" rx="2"/><path d="M10 4v4"/><path d="M2 8h20"/><path d="M6 4v4"/>'
+  };
+
+  var SVG_NS = 'http://www.w3.org/2000/svg';
+  var BASE_ATTRS = {
+    viewBox: '0 0 24 24',
+    fill: 'none',
+    stroke: 'currentColor',
+    'stroke-width': '1.75',
+    'stroke-linecap': 'round',
+    'stroke-linejoin': 'round',
+    focusable: 'false'
+  };
+
+  function esc(s) {
+    return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+  }
+
+  function has(name) {
+    return Object.prototype.hasOwnProperty.call(ICONS, name);
+  }
+
+  function dim(v) {
+    if (v == null || v === '') return '1em';
+    return /^\d+(\.\d+)?$/.test(String(v)) ? v + 'px' : String(v);
+  }
+
+  // 視覺線寬補償：圖示縮小時 viewBox 內的線寬會跟著縮，小圖示就會比大圖示細。
+  // 給定數值尺寸（px）時，以目標視覺線寬 v = 0.8 + 0.04×px（12px≈1.3、16px≈1.4、24px≈1.75、32px≈2.1）
+  // 換算回 viewBox 單位；尺寸由 CSS 決定（em / 未指定）時無法換算，維持 1.75。
+  function strokeFor(size) {
+    var px = parseFloat(size);
+    if (size == null || size === '' || !isFinite(px) || px <= 0 || /[a-z%]/i.test(String(size).replace(/px$/i, ''))) return '1.75';
+    return String(Math.round((0.8 + 0.04 * px) * 24 / px * 100) / 100);
+  }
+
+  /** 回傳 SVG 字串。未知名稱回傳空字串（避免畫面出現破圖）。 */
+  function svg(name, opts) {
+    if (!has(name)) return '';
+    opts = opts || {};
+    var size = dim(opts.size);
+    var sw = opts.stroke || strokeFor(opts.size);
+    var cls = 'ic ic-' + name + (opts.cls ? ' ' + opts.cls : '');
+    var a = ['class="' + esc(cls) + '"'];
+    Object.keys(BASE_ATTRS).forEach(function (k) { a.push(k + '="' + BASE_ATTRS[k] + '"'); });
+    a = a.map(function (x) { return x.indexOf('stroke-width=') === 0 ? 'stroke-width="' + esc(sw) + '"' : x; });
+    a.push('width="' + size + '"', 'height="' + size + '"');
+    if (opts.style) a.push('style="' + esc(opts.style) + '"');
+    if (opts.title) a.push('role="img"', 'aria-label="' + esc(opts.title) + '"');
+    else a.push('aria-hidden="true"');
+    return '<svg xmlns="' + SVG_NS + '" ' + a.join(' ') + '>' + ICONS[name] + '</svg>';
+  }
+
+  /** 回傳 SVG DOM 元素（不使用 innerHTML / DOMParser，可在有 Trusted Types 限制的頁面使用）。 */
+  function el(name, opts) {
+    if (!has(name)) return null;
+    opts = opts || {};
+    var size = dim(opts.size);
+    var node = document.createElementNS(SVG_NS, 'svg');
+    Object.keys(BASE_ATTRS).forEach(function (k) { node.setAttribute(k, BASE_ATTRS[k]); });
+    node.setAttribute('stroke-width', String(opts.stroke || strokeFor(opts.size)));
+    node.setAttribute('class', 'ic ic-' + name + (opts.cls ? ' ' + opts.cls : ''));
+    node.setAttribute('width', size);
+    node.setAttribute('height', size);
+    if (opts.style) node.setAttribute('style', opts.style);
+    if (opts.title) { node.setAttribute('role', 'img'); node.setAttribute('aria-label', opts.title); }
+    else node.setAttribute('aria-hidden', 'true');
+
+    var re = /<(\w+)\s+([^>]*?)\/>/g, m;
+    while ((m = re.exec(ICONS[name]))) {
+      var child = document.createElementNS(SVG_NS, m[1]);
+      var attrRe = /([\w:-]+)="([^"]*)"/g, am;
+      while ((am = attrRe.exec(m[2]))) child.setAttribute(am[1], am[2]);
+      node.appendChild(child);
+    }
+    return node;
+  }
+
+  /** 把 root 底下所有 <i data-icon="name"> 替換成 SVG；保留 class / id / style。 */
+  function hydrate(rootEl) {
+    var scope = rootEl && rootEl.querySelectorAll ? rootEl : document;
+    var nodes = scope.querySelectorAll('[data-icon]');
+    for (var i = 0; i < nodes.length; i++) {
+      var n = nodes[i];
+      var name = n.getAttribute('data-icon');
+      var node = el(name, {
+        size: n.getAttribute('data-size'),
+        stroke: n.getAttribute('data-stroke'),
+        title: n.getAttribute('data-title')
+      });
+      if (!node) continue;
+      var extra = n.getAttribute('class');
+      if (extra) node.setAttribute('class', node.getAttribute('class') + ' ' + extra);
+      if (n.id) node.id = n.id;
+      var st = n.getAttribute('style');
+      if (st) node.setAttribute('style', st);
+      n.parentNode.replaceChild(node, n);
+    }
+  }
+
+  root.TruthIcons = {
+    ICONS: ICONS,
+    names: function () { return Object.keys(ICONS); },
+    has: has,
+    svg: svg,
+    el: el,
+    hydrate: hydrate
+  };
+
+  // content script 會被注入到任意第三方網頁，絕不能自動替換對方頁面上的 [data-icon] 元素；
+  // 因此在「真實擴充功能 context 且頁面是 http(s)」時略過自動 hydrate（popup 為 chrome-extension://，不受影響）。
+  var inHostPage = typeof chrome !== 'undefined' && chrome.runtime && chrome.runtime.id &&
+    typeof location !== 'undefined' && /^https?:$/.test(location.protocol);
+
+  if (typeof document !== 'undefined' && !inHostPage) {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function () { hydrate(document); });
+    } else {
+      hydrate(document);
+    }
+  }
+})(typeof window !== 'undefined' ? window : self);
+</script>
+<!-- truth-icons:end -->
+<script src="script.js"></script>
+</body>
+</html>

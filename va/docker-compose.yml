@@ -1,0 +1,19 @@
+# 用法：複製 .env.example 為 .env 並填值後執行 `docker compose up --build`
+services:
+  truthmark:
+    build: .
+    ports:
+      - "5500:5500"
+    env_file:
+      - .env
+    environment:
+      HOST: "0.0.0.0"
+      TRUTHMARK_RELOAD: "0"
+      TRUTHMARK_STATE_DIR: "/app/data"
+      TRUTHMARK_AUDIT_LOG_PATH: "/app/data/audit.log"
+    volumes:
+      - truthmark-data:/app/data          # 動態黑名單、回報、同步狀態與 audit log 全部持久化
+    restart: unless-stopped
+
+volumes:
+  truthmark-data:

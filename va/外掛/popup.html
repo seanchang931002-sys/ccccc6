@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=380" />
+<title>Truth－基於大數據之廣告行銷的稽核平台</title>
+<link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+
+<!-- 頂欄 -->
+<header class="topbar">
+  <div class="brand">
+    <img src="icons/icon128.png" width="30" height="30" alt="Truth" class="brand-logo" />
+    <div class="brand-text">
+      <div class="brand-name">Truth</div>
+      <div class="brand-version">v7.2 · 白名單／黑名單／硬規則／AI 四層防禦</div>
+    </div>
+  </div>
+  <div class="topbar-actions">
+    <button id="refreshBtn" class="icon-btn" type="button" aria-label="重新偵測後端" title="重新偵測後端"><i data-icon="refresh" data-size="18"></i></button>
+    <button id="settingsToggle" class="icon-btn" type="button" aria-label="設定" title="設定" aria-expanded="false" aria-controls="settingsPanel"><i data-icon="settings" data-size="18"></i></button>
+  </div>
+</header>
+
+<!-- 分段控制 -->
+<div class="seg" role="tablist" aria-label="檢視切換">
+  <button id="tabActions" class="seg-btn active" type="button" role="tab" aria-selected="true" aria-controls="panelActions">動作</button>
+  <button id="tabStats" class="seg-btn" type="button" role="tab" aria-selected="false" aria-controls="panelStats" tabindex="-1">統計資料</button>
+</div>
+
+<main class="main">
+
+  <!-- 動作面板 -->
+  <section id="panelActions" class="panel" role="tabpanel" aria-labelledby="tabActions">
+
+    <!-- 輸入網址分析 -->
+    <div class="action-item">
+      <div class="analyze-head">
+        <span class="ar-icon c-accent"><i data-icon="search" data-size="24"></i></span>
+        <span class="ar-label">輸入網址分析</span>
+      </div>
+      <div class="action-body">
+        <div class="url-row">
+          <input id="urlInput" type="text" placeholder="輸入或貼上要檢查的網址..." autocomplete="off" aria-label="要檢查的網址" />
+          <button id="useTabBtn" class="url-tool" type="button" aria-label="使用目前分頁" title="使用目前分頁"><i data-icon="file-text" data-size="18"></i></button>
+          <button id="analyzeBtn" class="btn-solid" type="button">分析</button>
+        </div>
+
+        <div id="errorBox" class="error-box" role="alert" hidden></div>
+        <div id="loading" class="loading" role="status" hidden>分析中…</div>
+
+        <!-- 結果卡片 -->
+        <div id="resultArea" class="result-area" hidden>
+          <div id="verdictBadge" class="verdict-badge">—</div>
+          <div id="targetUrlText" class="target-url"></div>
+          <div id="scoreLabel" class="score-label">—</div>
+          <div class="bar-track"><div id="glowFill" class="bar-fill"></div></div>
+          <div id="sourceBadge" class="source-tag"></div>
+
+          <div class="ai-summary" id="aiSummary">
+            <div class="section-title"><i data-icon="clipboard-list" data-size="16"></i><span>分析摘要</span></div>
+            <div id="aiSummaryText" class="ai-summary-text"></div>
+          </div>
+
+          <div class="feedback-row">
+            <span class="feedback-label">這個判斷正確嗎？</span>
+            <div class="feedback-btns">
+              <button id="btnScam" class="btn-feedback btn-danger" type="button"></button>
+              <button id="btnSafe" class="btn-feedback btn-safe" type="button"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 掃描頁面連結 -->
+    <div class="action-item">
+      <button id="scanLinksBtn" class="action-row" type="button">
+        <span class="ar-icon c-blue"><i data-icon="link" data-size="24"></i></span>
+        <span class="ar-label">掃描此頁面所有連結</span>
+      </button>
+      <div id="scanResult" class="action-note" aria-live="polite"></div>
+    </div>
+
+    <!-- 掃描頁面廣告風險 -->
+    <div class="action-item">
+      <button id="scanAdsBtn" class="action-row" type="button">
+        <span class="ar-icon c-warn"><i data-icon="megaphone" data-size="24"></i></span>
+        <span class="ar-label">掃描此頁面廣告風險</span>
+      </button>
+      <div id="scanAdsSummary" class="ad-score-summary" hidden>
+        <div class="ad-score-row">
+          <span class="ad-score-label">整體廣告風險分數</span>
+          <span id="adAvgScore" class="ad-score-value">—</span>
+        </div>
+        <div class="bar-track"><div id="adGlowFill" class="bar-fill"></div></div>
+      </div>
+      <div id="scanAdsResult" class="action-note" aria-live="polite"></div>
+    </div>
+
+    <!-- 設定 -->
+    <div class="action-item">
+      <button id="settingsRow" class="action-row" type="button" aria-expanded="false" aria-controls="settingsPanel">
+        <span class="ar-icon c-muted"><i data-icon="settings" data-size="24"></i></span>
+        <span class="ar-label">設定</span>
+        <span class="ar-chev"><i data-icon="chevron-down" data-size="16"></i></span>
+      </button>
+      <div id="settingsPanel" class="action-body settings-panel" hidden>
+        <div id="settingsLoadHint" class="settings-hint" role="status" hidden>無法讀取設定，目前顯示預設值</div>
+        <label class="settings-row">
+          <span>後端埠號</span>
+          <input id="apiPortInput" type="number" min="1" max="65535" value="5500" />
+        </label>
+
+        <label class="settings-row">
+          <span>自動檢查目前分頁並顯示徽章</span>
+          <input id="autoCheckTabToggle" class="mini-switch" type="checkbox" />
+        </label>
+
+        <label class="settings-row">
+          <span>自動掃描並標示頁面上的高風險連結</span>
+          <input id="autoScanLinksToggle" class="mini-switch" type="checkbox" />
+        </label>
+
+        <label class="settings-row">
+          <span>本機無法連線時，自動改用雲端後端</span>
+          <input id="useProdFallbackToggle" class="mini-switch" type="checkbox" />
+        </label>
+
+        <div id="apiStatus" class="api-status"></div>
+
+        <button id="saveSettingsBtn" class="btn-solid full-width" type="button">儲存設定</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 統計資料面板 -->
+  <section id="panelStats" class="panel" role="tabpanel" aria-labelledby="tabStats" hidden>
+    <div class="stats-row">
+      <div class="stat-cell">
+        <div class="stat-value" id="scanned-count">0</div>
+        <div class="stat-label">已掃描</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-value c-danger" id="detected-count">0</div>
+        <div class="stat-label">高風險</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-value" id="rule-count">0</div>
+        <div class="stat-label">規則攔截</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-value" id="feedback-count">0</div>
+        <div class="stat-label">已回報</div>
+      </div>
+    </div>
+
+    <section class="history-section">
+      <div class="list-header">
+        <span class="list-title">偵測歷史紀錄</span>
+        <button id="clear-history-btn" type="button"><i data-icon="trash" data-size="14"></i><span>清除紀錄</span></button>
+      </div>
+      <div id="history-list">
+        <div class="empty-state">
+          <i data-icon="shield-check" data-size="32" class="empty-icon"></i>
+          <p>尚無偵測紀錄</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer-tip">
+      <i data-icon="lightbulb" data-size="14"></i>
+      <span>點紀錄上的「<i data-icon="flag" data-size="12" class="tip-inline"></i> / <i data-icon="check-circle" data-size="12" class="tip-inline"></i>」會將回報送入 AI 訓練資料，讓模型越來越準。</span>
+    </div>
+  </section>
+
+</main>
+
+<!-- 頁尾狀態條 -->
+<footer class="statusbar">
+  <span id="status-dot" class="status-dot pending" aria-hidden="true"></span>
+  <span id="status-text" class="status-text" role="status">偵測後端連線中…</span>
+  <span id="status-detail" class="status-detail"></span>
+</footer>
+
+<script src="icons.js"></script>
+<script src="popup.js"></script>
+</body>
+</html>

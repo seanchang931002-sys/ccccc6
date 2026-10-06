@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "Truth－基於大數據之廣告行銷的稽核平台",
+  "short_name": "Truth",
+  "version": "7.2.0",
+  "description": "基於白名單／黑名單（含政府 165 開放資料可選匯入）／硬規則／AI 模型（Gradient Boosting，正式部署採用的單一模型；不可用時退回硬規則＋特徵啟發式）四層防禦，即時偵測詐騙廣告與釣魚網址，支援連結掃描、廣告掃描與偵測歷史統計。",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Truth－基於大數據之廣告行銷的稽核平台",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://confirmtm-dvccd9d5hydrcjfy.japanwest-01.azurewebsites.net/*",
+    "http://127.0.0.1:5500/*",
+    "http://localhost:5500/*",
+    "http://127.0.0.1:8000/*",
+    "http://localhost:8000/*",
+    "https://mycgu-aabjg2dgatbkb9gw.malaysiawest-01.azurewebsites.net/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["icons.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; object-src 'none'; img-src 'self' data:; base-uri 'self'; connect-src 'self' https://confirmtm-dvccd9d5hydrcjfy.japanwest-01.azurewebsites.net http://127.0.0.1:5500 http://localhost:5500 http://127.0.0.1:8000 http://localhost:8000 https://mycgu-aabjg2dgatbkb9gw.malaysiawest-01.azurewebsites.net;"
+  }
+}
