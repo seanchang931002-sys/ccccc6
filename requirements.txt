@@ -1,0 +1,39 @@
+# =============================================================================
+# TruthMark 後端依賴（v7.2）
+# =============================================================================
+# 模型檔 scam_model.pkl 以下列版本訓練，scikit-learn / numpy 必須固定版本，
+# 否則 joblib 載入可能失敗或結果不一致（/health 的 version_ok 會顯示 false）。
+scikit-learn==1.8.0
+numpy==2.4.4
+pandas>=2.2,<3
+joblib>=1.3
+
+# API 服務
+fastapi>=0.110
+uvicorn[standard]>=0.29
+pydantic>=2.5
+python-multipart
+
+# 非同步 HTTP 用戶端（deep_scan 抓取網頁；需支援 sni_hostname 擴充，見 text_features.py）
+httpx>=0.27
+
+# v7 新增：網域切分（registered domain / SLD / TLD）使用離線 Public Suffix List 快照
+# （features.py 以 suffix_list_urls=() 建立，不連網；未安裝時退回有限、明確標示的 suffix fallback）
+tldextract>=5.1
+
+# v7.2：跨行程檔案鎖（blocklist_store.py／main.py 的 feedback.csv 讀改寫；多 worker 部署必備）
+filelock>=3.13
+
+# 解析網頁 HTML、擷取可讀文字（text_features.py 延遲匯入；未安裝時退回簡易標籤移除）
+beautifulsoup4
+
+# -----------------------------------------------------------------------
+# 選用依賴（BERT 語意特徵 Ensemble，見 text_features.py）
+# 預設不安裝：torch/transformers 體積大、需要額外評估 CPU/GPU 推論延遲。
+# 要啟用 text_features.py 的 BERT 向量擷取，取消下方兩行註解並設定
+# 環境變數 TRUTHMARK_ENABLE_BERT=1：
+# torch
+# transformers
+# -----------------------------------------------------------------------
+
+# pip install -r requirements.txt
